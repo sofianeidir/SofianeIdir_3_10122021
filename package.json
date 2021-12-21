@@ -1,0 +1,19 @@
+{
+  "name": "p3_idir_sofiane",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./scss/style.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sofianeidir/SofianeIdir_3_10122021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sofianeidir/SofianeIdir_3_10122021/issues"
+  },
+  "homepage": "https://github.com/sofianeidir/SofianeIdir_3_10122021#readme"
+}
