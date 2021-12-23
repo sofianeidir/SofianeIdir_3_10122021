@@ -5,9 +5,10 @@ main {
 
 a {
   text-decoration: none;
-  color: black;
+  color: #FFF;
 }
 
+/**HEADER**/
 header {
   text-align: center;
   height: 50px;
@@ -20,6 +21,7 @@ header h1 {
   font-family: "Shrikhand", cursive;
 }
 
+/**RECHERCHES**/
 .reservation_menus {
   background-color: #ddd9d942;
   height: 300px;
@@ -37,7 +39,7 @@ form .header_form {
   padding-top: 15px;
   margin-left: 35px;
 }
-form .teste {
+form .header_form--input {
   border: none;
   outline: none;
   background: transparent;
@@ -62,7 +64,7 @@ form :focus::placeholder {
   font-weight: 100;
   color: rgba(78, 78, 78, 0.911);
 }
-.reservation_text .button {
+.reservation_text .reservation_text--button {
   background-color: #C968DB;
   border-radius: 30px;
   height: 45px;
@@ -73,18 +75,19 @@ form :focus::placeholder {
   font-size: 14px;
 }
 
-.fonction {
+/**PARTIE FONCTIONNEMENT**/
+.functioning {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-.fonction h3 {
+.functioning h3 {
   padding: 40px 0 10px 20px;
   margin: 0;
   font-size: 24px;
 }
 
-.regroupement {
+.functioning_block {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -93,7 +96,7 @@ form :focus::placeholder {
   margin-bottom: 45px;
 }
 
-.fonction_1 {
+.functioning_block--element {
   display: flex;
   align-items: center;
   font-size: 17px;
@@ -102,7 +105,7 @@ form :focus::placeholder {
   height: 70px;
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.137);
 }
-.fonction_1 .numbers {
+.functioning_block--element .numbers {
   border: 1px solid transparent;
   background-color: #9356DC;
   border-radius: 50%;
@@ -115,24 +118,26 @@ form :focus::placeholder {
   right: 14px;
   top: 4px;
 }
-.fonction_1 .fas {
+.functioning_block--element .fas {
   font-size: 19px;
+  max-width: 3px;
   position: relative;
   top: 1px;
   left: 5px;
   color: rgba(68, 68, 68, 0.733);
 }
-.fonction_1 .fonction_choice {
+.functioning_block--element .functioning_block--text {
   position: relative;
-  left: 32px;
+  left: 43px;
   top: 3px;
   font-size: 17px;
   font-weight: 500;
 }
 
+/**PARTIE RESTAURANTS**/
 .restaurant {
   width: 100%;
-  height: 1010px;
+  height: 1130px;
   background-color: #99999917;
 }
 .restaurant h3 {
@@ -141,17 +146,18 @@ form :focus::placeholder {
   margin: 0;
 }
 
-.contenair_article {
+.container_articles {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  height: 880px;
+  height: 990px;
 }
 
+/**CARTES**/
 article {
   width: 90%;
-  height: 205px;
+  height: 230px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0px 4px 9px rgba(163, 163, 163, 0.356);
@@ -160,18 +166,26 @@ article {
 }
 article img {
   object-fit: cover;
-  height: 147px;
+  object-position: 0 -60px;
+  height: 170px;
+  width: 100%;
+}
+article .picture_Note img {
+  object-fit: cover;
+  object-position: 0 -156px;
+  height: 170px;
   width: 100%;
 }
 article .infos {
   height: 20px;
-  margin: 5px 0 0 10px;
+  margin: 7px 0 0 10px;
   line-height: 19px;
   width: 100%;
 }
 article h4 {
   margin: 0;
   font-size: 14px;
+  color: black;
 }
 article p {
   margin: 0;
@@ -182,16 +196,18 @@ article p {
 article .far {
   position: absolute;
   left: 90%;
-  bottom: 23px;
+  bottom: 22px;
+  color: black;
 }
 
-.position_relative {
+/**ETIQUETTE NOUVEAU**/
+.container_articles--relative {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   position: relative;
 }
-.position_relative p {
+.container_articles--relative p {
   border-radius: 2px;
   text-align: center;
   line-height: 20px;
@@ -202,10 +218,11 @@ article .far {
   width: 60px;
   font-weight: 500;
   position: absolute;
-  bottom: 145px;
+  bottom: 155px;
   right: 10px;
 }
 
+/**FOOTER**/
 footer {
   background-color: #333333;
   color: #FFF;
