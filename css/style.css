@@ -232,4 +232,156 @@ footer .fas {
   font-size: 13px;
 }
 
+main {
+  width: 100%;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: rgba(233, 233, 233, 0.993);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFF;
+  height: 65px;
+}
+header .fas {
+  color: black;
+  position: relative;
+  right: 90px;
+  font-size: 19px;
+}
+header h1 {
+  font-size: 27px;
+  font-family: "Shrikhand", cursive;
+  margin-bottom: 5px;
+}
+
+img {
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+}
+
+.menuMyfood {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(233, 233, 233, 0.993);
+  width: 100%;
+  height: 1070px;
+  border-radius: 30px 30px 0 0;
+  position: relative;
+  bottom: 30px;
+}
+.menuMyfood .menuMyfood--title {
+  margin-top: 5px;
+  margin-left: 20px;
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menuMyfood .menuMyfood--title h2 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+  font-size: 27px;
+}
+.menuMyfood .menuMyfood--title .far {
+  font-size: 25px;
+}
+
+.menuMyfood_list {
+  margin-left: 20px;
+}
+.menuMyfood_list h3 {
+  font-size: 16px;
+  font-weight: 300;
+  border-bottom: 3px solid #99E2D0;
+  width: 11%;
+}
+.menuMyfood_list .menuMyfood_list--bloc {
+  border: 2px solid transparent;
+  border-radius: 15px;
+  height: 45px;
+  width: 92%;
+  background-color: #FFF;
+  line-height: 0px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 10px rgba(158, 158, 158, 0.267);
+  position: relative;
+}
+.menuMyfood_list h4 {
+  font-size: 17px;
+  font-weight: 500;
+}
+.menuMyfood_list p {
+  font-size: 14px;
+  font-weight: 100;
+}
+.menuMyfood_list .prix {
+  position: absolute;
+  left: 88%;
+  font-weight: 600;
+}
+
+.menuMyfood--button {
+  background-color: #C968DB;
+  color: #FFF;
+  width: 175px;
+  height: 50px;
+  border-radius: 30px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 40px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.menuNote {
+  height: 1160px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(233, 233, 233, 0.993);
+  width: 100%;
+  border-radius: 30px 30px 0 0;
+  position: relative;
+  bottom: 30px;
+}
+.menuNote .menuNote--title {
+  margin-top: 5px;
+  margin-left: 20px;
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menuNote h2 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+  font-size: 27px;
+}
+.menuNote .far {
+  font-size: 25px;
+}
+.menuNote .menuMyfood--button {
+  background-color: #C968DB;
+  color: #FFF;
+  width: 175px;
+  height: 50px;
+  border-radius: 30px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 40px;
+  font-size: 17px;
+  cursor: pointer;
+  margin-top: 35px;
+}
+
 /*# sourceMappingURL=style.css.map */

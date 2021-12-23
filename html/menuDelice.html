@@ -4,77 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="scss/menu.scss" />
-    <link rel="stylesheet" href="css/normalize.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css"/>
     <script src="https://kit.fontawesome.com/9e216b68e0.js" crossorigin="anonymous"></script>
     <title>Le délice des sens</title>
 </head>
 <body>
     <main>
         <header>
-            <a href="#"><i class="fas fa-arrow-left"></i></a>
+            <a href="/index.html"><i class="fas fa-arrow-left"></i></a>
             <h1>ohmyfood</h1>
         </header>
         <div>
             <img src="/images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
         </div>
-        <sections>
-            <div>
+        <sections class="menuMyfood">
+            <div class="menuMyfood--title">
                 <h2>Le délice des sens</h2>
                 <i class="far fa-heart"></i>
             </div>
-            <div>
+            <div class="menuMyfood_list">
                 <h3>ENTRÉES</h3>
                 <div>
-                    <div>
+                    <div class="menuMyfood_list--bloc"> 
                         <h4>Tartare de thon</h4>
                         <p>Assaisonné au yuzu<span class="prix">25€</span></p>
                     </div>
-                    <div>
+                    <div class="menuMyfood_list--bloc">
                         <h4>Bouchée de homard croustillant </h4>
                         <p>Et sa farandole de petits légumes<span class="prix">35€</span></p>
                     </div>
-                    <div>
+                    <div class="menuMyfood_list--bloc">
                         <h4>Velouté de cèpes</h4>
                         <p>Aux truffes<span class="prix">20€</span></p>
                     </div>
                 </div>
             </div>
-            <div>
+            <div class="menuMyfood_list">
                 <h3>PLATS</h3>
                 <div>
-                    <div>
+                    <div class="menuMyfood_list--bloc">
                         <h4>Poulet rôti aux herbes de Provence </h4>
                         <p>Et sa crème de truffe<span class="prix">40€</span></p>
                     </div>
-                    <div>
+                    <div class="menuMyfood_list--bloc">
                         <h4>Langouste rôtie</h4>
                         <p>Et ses légumes de saison<span class="prix">35€</span></p>
                     </div>
-                    <div>
+                    <div class="menuMyfood_list--bloc">
                         <h4>Côte de boeuf Angus</h4>
                         <p>Et sa purée de panais<span class="prix">44€</span></p>
                     </div>
                 </div>  
             </div>
-            <div>
+            <div class="menuMyfood_list">
                 <h3>DESSERTS</h3>
                 <div>
-                    <div>
+                    <div class="menuMyfood_list--bloc">
                         <h4>Farandole de desserts</h4>
                         <p>Du chef<span class="prix">18€</span></p>
                     </div>
-                    <div>
+                    <div class="menuMyfood_list--bloc">
                         <h4>Crème brulée</h4>
                         <p>Revisité<span class="prix">22€</span></p>
                     </div>
-                    <div>
+                    <div class="menuMyfood_list--bloc">
                         <h4>Tiramisu</h4>
                         <p>À la noisette<span class="prix">23€</span></p>
                     </div>
                 </div>
             </div>
-            <input type="button" value="Commander">
+            <input type="button" class="menuMyfood--button" value="Commander">
         </sections>
         <footer>
             <h5>ohmyfood</h5>

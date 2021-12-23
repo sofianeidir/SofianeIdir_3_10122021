@@ -2,7 +2,7 @@ main{
     font-family: 'Roboto', sans-serif;
 }
 
-body {
+/***body {
     width: 100%;
     margin: 0;
 }
@@ -17,16 +17,16 @@ h1{
     font-family: 'Shrikhand', cursive;
     margin-bottom: 5px;
 
-}
+}**/
 
-header .fas{
+/**header .fas{
     color: black;
     position: relative;
     right: 90px;
     font-size: 19px;
     
-}
-
+}**/
+/**
 img {
     object-fit: cover;
     height: 200px;
@@ -87,7 +87,7 @@ h2 {
 .menus_entree--contenair p {
     font-size: 14px;
     font-weight: 100;
-}
+} 
 .prix {
     position: absolute;
     left: 88%;
@@ -97,6 +97,6 @@ h2 {
 h3 {
     font-size: 16px;
     font-weight: 300;
-}
+}**/
 
 
