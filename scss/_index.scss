@@ -3,6 +3,8 @@
 
 * {
    box-sizing: border-box;
+   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 
 main {
@@ -234,7 +236,7 @@ header {
         width: 60px;
         font-weight: 500;
         position: absolute;
-        bottom: 155px;
+        bottom: 170px;
         right: 10px;
         }
 

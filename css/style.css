@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 
 main {
@@ -224,7 +226,7 @@ article .far {
   width: 60px;
   font-weight: 500;
   position: absolute;
-  bottom: 155px;
+  bottom: 170px;
   right: 10px;
 }
 
@@ -409,8 +411,8 @@ img {
   margin-top: 35px;
 }
 
-/*** VERSION TABLETTE ***/
-@media screen and (min-width: 530px) {
+/*** VERSION TABLETTE INDEX.HTML ***/
+@media screen and (min-width: 650px) {
   /**HEADER**/
   header {
     height: 90px;
@@ -442,6 +444,10 @@ img {
   .reservation_text .reservation_text--button {
     height: 65px;
     width: 300px;
+    font-size: 19px;
+  }
+
+  form ::placeholder {
     font-size: 19px;
   }
 
@@ -477,10 +483,6 @@ img {
   }
 
   /**PARTIE RESTAURANTS**/
-  form ::placeholder {
-    font-size: 19px;
-  }
-
   .restaurant {
     width: 100%;
     height: 1750px;
@@ -497,16 +499,19 @@ img {
     box-shadow: 0px 7px 10px rgba(46, 46, 46, 0.932);
   }
   .restaurant article img {
-    object-position: 0 -130px;
-    height: 290px;
+    object-position: 0 -110px;
+    height: 78%;
+  }
+  .restaurant article .picture_Note {
+    height: 78%;
   }
   .restaurant article .picture_Note img {
     object-position: 0 -336px;
-    height: 290px;
-    width: 100%;
+    height: 100%;
   }
   .restaurant article .infos {
     line-height: 30px;
+    height: 60px;
   }
   .restaurant article h4 {
     font-size: 21px;
@@ -528,7 +533,7 @@ img {
   .restaurant .container_articles--relative p {
     height: 25px;
     width: 90px;
-    bottom: 275px;
+    bottom: 310px;
     right: 20px;
   }
 
@@ -543,10 +548,17 @@ img {
     font-size: 19px;
   }
 }
-/**DESKTOP**/
+/** VERSION DESKTOP INDEX.HTML**/
 @media screen and (min-width: 1050px) {
   form .header_form {
     margin-left: 10px;
+  }
+
+  .functioning h3 {
+    text-align: center;
+  }
+  .functioning .functioning_block--element {
+    box-shadow: 0 7px 11px black;
   }
 
   /**PARTIE RESTAURANTS**/
@@ -554,6 +566,7 @@ img {
     width: 100%;
     height: 950px;
     background-color: #99999917;
+    text-align: center;
   }
   .restaurant h3 {
     font-size: 33px;
@@ -571,12 +584,12 @@ img {
     box-shadow: 0px 7px 10px rgba(46, 46, 46, 0.932);
   }
   .restaurant article img {
-    object-position: 0 -50px;
+    object-position: 0 0;
     height: 280px;
     object-fit: cover;
   }
   .restaurant article .picture_Note img {
-    object-position: 0 -200px;
+    object-position: 0 0;
     height: 280px;
     width: 100%;
   }
@@ -604,8 +617,194 @@ img {
   .restaurant .container_articles--relative p {
     height: 25px;
     width: 90px;
-    bottom: 275px;
+    bottom: 305px;
     right: 20px;
+  }
+
+  footer {
+    text-align: center;
+  }
+}
+/*** VERSION TABLETTE MENUS.HTML ***/
+@media screen and (min-width: 440px) {
+  header .fas {
+    align-content: center;
+    top: 5px;
+    right: 200px;
+    font-size: 30px;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+  }
+
+  .menuMyfood {
+    height: 1370px;
+  }
+  .menuMyfood .menuMyfood--title {
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .menuMyfood .menuMyfood--title h2 {
+    font-size: 30px;
+  }
+  .menuMyfood .menuMyfood--title .far {
+    font-size: 25px;
+    position: relative;
+    left: 20px;
+  }
+
+  .menuMyfood_list {
+    width: 100%;
+    margin: 0;
+  }
+  .menuMyfood_list h3 {
+    margin-left: 35px;
+    font-size: 21px;
+    width: 7%;
+  }
+  .menuMyfood_list .menuMyfood_list--bloc {
+    margin: auto;
+    height: 80px;
+    width: 70%;
+    line-height: 0px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 10px rgba(158, 158, 158, 0.267);
+    position: relative;
+  }
+  .menuMyfood_list h4 {
+    font-size: 21px;
+    font-weight: 500;
+  }
+  .menuMyfood_list p {
+    font-size: 19px;
+    font-weight: 100;
+  }
+  .menuMyfood_list .prix {
+    position: absolute;
+    left: 88%;
+    font-weight: 600;
+  }
+
+  footer {
+    text-align: center;
+  }
+}
+/*** VERSION DESKTOP MENUS.HTML ***/
+@media screen and (min-width: 1050px) {
+  header .fas {
+    right: 550px;
+    font-size: 40px;
+  }
+
+  img {
+    object-fit: cover;
+    height: 400px;
+    width: 100%;
+    object-position: 0 -450px;
+  }
+
+  .menuMyfood {
+    height: 1370px;
+  }
+  .menuMyfood .menuMyfood--title {
+    margin-top: 5px;
+    margin-left: 15px;
+    text-align: center;
+    width: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .menuMyfood .menuMyfood--title h2 {
+    font-size: 40px;
+  }
+  .menuMyfood .menuMyfood--title .far {
+    font-size: 25px;
+    position: relative;
+    left: 20px;
+  }
+  .menuMyfood .menuMyfood_list {
+    width: 100%;
+    margin-left: 5px;
+  }
+  .menuMyfood .menuMyfood_list h3 {
+    font-size: 21px;
+    width: 4%;
+  }
+
+  /*** MENU NOTE ***/
+  .menuNote {
+    height: 1485px;
+  }
+  .menuNote .menuNote--title {
+    margin-top: 5px;
+    margin-left: 15px;
+    text-align: center;
+    width: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .menuNote h2 {
+    font-size: 40px;
+  }
+  .menuNote .far {
+    font-size: 25px;
+    position: relative;
+    left: 20px;
+  }
+
+  /*** FIN MENU NOTE ***/
+  .menuMyfood_list {
+    margin-left: 15px;
+  }
+  .menuMyfood_list h3 {
+    font-size: 21px;
+    font-weight: 700;
+    width: 4%;
+    margin-right: 0;
+    position: relative;
+    top: 50%;
+    left: 2%;
+  }
+  .menuMyfood_list .menuMyfood_list--bloc {
+    height: 75px;
+    width: 70%;
+    margin: auto;
+    line-height: 0px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 10px rgba(73, 73, 73, 0.781);
+    position: relative;
+  }
+  .menuMyfood_list .menuMyfood_list--bloc h4 {
+    font-size: 21px;
+  }
+  .menuMyfood_list .menuMyfood_list--bloc p {
+    font-size: 17px;
+  }
+  .menuMyfood_list .menuMyfood_list--bloc .prix {
+    position: absolute;
+    left: 95%;
+    top: 35px;
+  }
+}
+/*** AGENCEMENT PHOTOS INDEX.HTML ***/
+@media screen and (min-width: 1350px) {
+  .restaurant article img {
+    object-position: 0 -90px;
+  }
+  .restaurant article .picture_Note img {
+    object-position: 0 -350px;
   }
 }
 

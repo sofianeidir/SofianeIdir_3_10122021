@@ -1,0 +1,494 @@
+
+/*** VERSION TABLETTE INDEX.HTML ***/
+@media screen and ( min-width: 650px) {
+    /**HEADER**/
+    header {
+        height: 90px;
+
+        h1 {
+            font-size: 45px;
+        }
+    }
+
+    form{
+    
+        .header_form {
+            margin-left: 10px;
+            }
+
+        & ::placeholder {
+            font-size: 21px;
+        }
+
+        & .fas { 
+            font-size: 21px;
+        }
+    }
+   /**RECHERCHES**/
+    .reservation_text {
+    
+        & h2 { 
+            font-size: 30px;
+            max-width: none;
+            }
+        & p {
+        
+            font-size: 23px ;
+            font-weight: 100;
+            color: rgba(78, 78, 78, 0.911);
+        }  
+        & .reservation_text--button {
+            height: 65px;
+            width: 300px;
+            font-size: 19px;
+        }
+    }  
+
+    form {
+        & ::placeholder {
+            font-size: 19px;
+        }
+    }
+    /**PARTIE FONCTIONNEMENT**/
+    .functioning {
+        height: 500px;
+
+        & h3 {
+            font-size: 33px;
+            }
+            .functioning_block {
+                align-items: center;
+                height: 400px;
+                width: 500px;
+                margin: auto;
+                margin-left: none;
+                margin-bottom: none;
+            }
+
+            .functioning_block--element {
+                width: 550px;
+                height: 90px;
+                margin-bottom: 25px;
+
+                & .fas {
+                    font-size: 23px;
+                    top: 1px;
+                    left: 20px;
+                }
+
+                & .functioning_block--text {
+                    left: 80px;
+                    font-size: 27px;
+                    font-weight: 500;
+                }
+
+            }
+    }
+    /**PARTIE RESTAURANTS**/
+    .restaurant {
+        width: 100%;
+        height: 1750px;
+        background-color: #99999917;
+    
+        h3 {
+            font-size: 33px;
+        }
+        .container_articles{
+           height: 1600px;
+        }
+
+        article {
+            height: 365px;
+            box-shadow: 0px 7px 10px rgba(46, 46, 46, 0.932);
+            img {
+                object-position: 0 -110px ;
+                height: 78%; 
+                }
+            
+                .picture_Note {
+                    height: 78%;
+                    img{
+                        object-position: 0 -336px ;
+                        height: 100%;
+                    }
+                }   
+        
+                .infos {
+                    line-height: 30px;
+                    height: 60px;
+                }
+    
+                & h4 {
+                    font-size: 21px;
+                }
+    
+                & p {
+                    font-size: 19px;
+                }
+           
+                & .far {
+                    left: 95%;
+                    bottom: 23px;
+                    font-size: 25px;
+                }   
+        } 
+        .container_articles--relative {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            position: relative;
+                
+            & p {
+                height: 25px;
+                width: 90px;
+                bottom: 310px;
+                right: 20px;
+                }
+        }
+    }
+
+    footer {
+            
+        h5 {
+
+            font-size: 25px;
+        }
+    
+        ul {
+            height: 150px;
+            font-size: 23px;
+        }
+    
+        & .fas {
+            font-size: 19px;
+        }
+    }
+}
+
+/** VERSION DESKTOP INDEX.HTML**/
+@media screen and (min-width: 1050px) {
+
+    form{
+
+        .header_form {
+            margin-left: 10px;
+        }
+    }      
+    
+    
+    .functioning {
+
+        & h3 {
+            text-align: center;
+        }
+
+        .functioning_block--element {
+            box-shadow: 0 7px 11px rgb(0, 0, 0);
+        }    
+    }
+    /**PARTIE RESTAURANTS**/
+    .restaurant {
+        width: 100%;
+        height: 950px;
+        background-color: #99999917;
+        text-align: center;
+        
+    
+        h3 {
+            font-size: 33px;
+        }
+        .container_articles{
+            margin: 0 15px 0 15px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+           height: 800px;
+        }
+
+        article {
+            width: 46%;
+            height: 355px;
+            box-shadow: 0px 7px 10px rgba(46, 46, 46, 0.932);
+            
+                img {
+                    object-position: 0 0;
+                    height: 280px; 
+                    object-fit: cover;
+                }
+            
+                .picture_Note img{ 
+                    object-position: 0 0 ;
+                    height: 280px;
+                    width: 100%;  
+                }
+    
+                .infos {
+                    height: none;
+                    line-height: 30px;
+                }
+    
+                & h4 {
+                    font-size: 21px;
+                }
+    
+                & p {
+                    font-size: 19px;
+                }
+           
+                & .far {
+                    left: 91%;
+                    bottom: 23px;
+                    font-size: 25px;
+                }   
+        } 
+        .container_articles--relative {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            position: relative;
+                
+            & p {
+                height: 25px;
+                width: 90px;
+                bottom: 305px;
+                right: 20px;
+                }
+        
+        }
+    }
+
+    footer {
+        text-align: center;
+    }
+}
+
+/*** VERSION TABLETTE MENUS.HTML ***/
+
+@media screen and ( min-width: 440px) {
+
+    header {
+      
+        & .fas{
+            align-content: center;
+            top: 5px;
+            right: 200px;
+            font-size: 30px;
+        }
+    }
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 250px;
+    }
+
+
+    .menuMyfood { 
+        height: 1370px;
+
+        .menuMyfood--title {
+           
+            text-align: center;
+            justify-content: center;
+            width: 100%;
+
+            h2 {
+                font-size: 30px;
+            }
+
+            .far {
+                font-size: 25px ;
+                position: relative;
+                left: 20px
+            }
+        }
+    } 
+    .menuMyfood_list{ 
+        width: 100%;
+        margin: 0;
+    
+        h3 {
+            margin-left: 35px;
+            font-size: 21px;
+            width: 7%;
+        }
+        
+        .menuMyfood_list--bloc {
+            margin: auto;
+            height: 80px;
+            width: 70%;
+            line-height: 0px;
+            padding-bottom: 15px;
+            padding-left: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 10px rgba(158, 158, 158, 0.267);
+            position: relative;
+        }
+    
+        & h4 {
+            font-size: 21px;
+            font-weight: 500;
+        }
+        
+        & p {
+            font-size: 19px;
+            font-weight: 100;
+            
+        }
+    
+        .prix {
+            position: absolute;
+            left: 88%;
+            font-weight: 600;
+        }
+    }
+
+    footer {
+        text-align: center;
+    }
+
+}
+
+
+/*** VERSION DESKTOP MENUS.HTML ***/
+
+@media screen and (min-width: 1050px) {
+
+    header {
+
+        & .fas{
+            right: 550px;
+            font-size: 40px;
+        }
+    }  
+
+    img {
+        object-fit: cover;
+        height: 400px;
+        width: 100%;
+        object-position: 0 -450px;
+    }
+
+    .menuMyfood { 
+        height: 1370px;
+
+        .menuMyfood--title {
+            margin-top: 5px;
+            margin-left: 15px;
+            text-align: center;
+            width: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+            h2 {
+                font-size: 40px;
+            }
+
+            .far {
+                font-size: 25px ;
+                position: relative;
+                left: 20px
+            }
+        }
+        .menuMyfood_list{ 
+            width: 100%;
+            margin-left:5px;
+        
+            h3 {
+                font-size: 21px;
+                width: 4%;
+
+            }
+        }    
+    } 
+    /*** MENU NOTE ***/
+    .menuNote {
+        height: 1485px;
+    
+        .menuNote--title
+        {
+            margin-top: 5px;
+            margin-left: 15px;
+            text-align: center;
+            width: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+    
+        h2 {
+            font-size: 40px;
+        }
+    
+        .far {
+            font-size: 25px ;
+            position: relative;
+            left: 20px
+        }
+    }
+    /*** FIN MENU NOTE ***/
+
+    .menuMyfood_list{ 
+        margin-left: 15px;
+    
+        h3 {
+            font-size: 21px;
+            font-weight: 700;
+            width: 4%;
+            margin-right: 0;
+            position: relative;
+            top: 50%;
+            left: 2%;
+        }
+        
+        .menuMyfood_list--bloc {
+            height: 75px;
+            width: 70%;
+            margin: auto;
+            line-height: 0px;
+            padding-bottom: 15px;
+            padding-left: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 10px rgba(73, 73, 73, 0.781);
+            position: relative;
+    
+            & h4 {
+                font-size: 21px;
+            }
+        
+            & p {
+                font-size: 17px;
+            
+            }
+    
+            .prix {
+            position: absolute;
+            left: 95%;
+            top: 35px;
+            }
+        }
+    }
+}
+
+
+/*** AGENCEMENT PHOTOS INDEX.HTML ***/
+@media screen and (min-width: 1350px) {
+    
+    .restaurant {
+    article {
+        
+            img {
+                object-position: 0 -90px;
+            }
+        
+            .picture_Note img{ 
+                object-position: 0 -350px;
+            }
+    }
+}
+} 
+
+            
