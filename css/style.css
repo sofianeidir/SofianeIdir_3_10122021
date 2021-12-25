@@ -4,6 +4,10 @@
   -webkit-box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+}
+
 main {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -12,6 +16,7 @@ main {
 a {
   text-decoration: none;
   color: #FFF;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /**HEADER**/
@@ -62,8 +67,6 @@ form :focus::placeholder {
 .reservation_text h2 {
   font-size: 23px;
   max-width: 270px;
-  /**margin-left: 45px;
-  margin-top: 35px;**/
   margin: 35px auto;
   margin-bottom: 0;
 }
@@ -81,6 +84,7 @@ form :focus::placeholder {
   box-shadow: 2px 6px 10px rgba(129, 129, 129, 0.616);
   color: #FFF;
   font-size: 14px;
+  cursor: pointer;
 }
 
 /**PARTIE FONCTIONNEMENT**/
@@ -112,6 +116,7 @@ form :focus::placeholder {
   width: 330px;
   height: 70px;
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.137);
+  cursor: pointer;
 }
 .functioning_block--element .numbers {
   border: 1px solid transparent;
@@ -172,11 +177,11 @@ article {
   background-color: #FFF;
   position: relative;
 }
-article img {
+article .picture_Myfood img {
   object-fit: cover;
   object-position: 0 -60px;
-  height: 170px;
   width: 100%;
+  height: 170px;
 }
 article .picture_Note img {
   object-fit: cover;
@@ -204,7 +209,7 @@ article p {
 article .far {
   position: absolute;
   left: 90%;
-  bottom: 22px;
+  bottom: 27px;
   color: black;
 }
 
@@ -270,11 +275,13 @@ header {
   align-items: center;
   background: #FFF;
   height: 65px;
+  position: relative;
 }
 header .fas {
   color: black;
-  position: relative;
-  right: 90px;
+  position: absolute;
+  right: 90%;
+  top: 28px;
   font-size: 19px;
 }
 header h1 {
@@ -285,7 +292,7 @@ header h1 {
 
 img {
   object-fit: cover;
-  height: 200px;
+  height: 250px;
   width: 100%;
 }
 
@@ -294,10 +301,10 @@ img {
   flex-direction: column;
   background-color: rgba(233, 233, 233, 0.993);
   width: 100%;
-  height: 1100px;
+  height: 1070px;
   border-radius: 30px 30px 0 0;
   position: relative;
-  bottom: 30px;
+  bottom: 55px;
 }
 .menuMyfood .menuMyfood--title {
   margin-top: 5px;
@@ -337,6 +344,7 @@ img {
   margin-bottom: 15px;
   box-shadow: 0 5px 10px rgba(158, 158, 158, 0.267);
   position: relative;
+  cursor: pointer;
 }
 .menuMyfood_list h4 {
   font-size: 17px;
@@ -366,6 +374,7 @@ img {
   margin-top: 35px;
   font-size: 17px;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .menuNote {
@@ -408,11 +417,12 @@ img {
   margin-top: 35px;
   font-size: 17px;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
   margin-top: 35px;
 }
 
 /*** VERSION TABLETTE INDEX.HTML ***/
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 640px) {
   /**HEADER**/
   header {
     height: 90px;
@@ -463,8 +473,6 @@ img {
     height: 400px;
     width: 500px;
     margin: auto;
-    margin-left: none;
-    margin-bottom: none;
   }
   .functioning .functioning_block--element {
     width: 550px;
@@ -498,9 +506,12 @@ img {
     height: 365px;
     box-shadow: 0px 7px 10px rgba(46, 46, 46, 0.932);
   }
-  .restaurant article img {
-    object-position: 0 -110px;
+  .restaurant article .picture_Myfood {
     height: 78%;
+  }
+  .restaurant article .picture_Myfood img {
+    object-position: 0 -110px;
+    height: 100%;
   }
   .restaurant article .picture_Note {
     height: 78%;
@@ -583,18 +594,23 @@ img {
     height: 355px;
     box-shadow: 0px 7px 10px rgba(46, 46, 46, 0.932);
   }
-  .restaurant article img {
-    object-position: 0 0;
+  .restaurant article .picture_Myfood {
     height: 280px;
+  }
+  .restaurant article .picture_Myfood img {
+    object-position: 0 0;
+    height: 100%;
     object-fit: cover;
+  }
+  .restaurant article .picture_Note {
+    height: 280px;
   }
   .restaurant article .picture_Note img {
     object-position: 0 0;
-    height: 280px;
     width: 100%;
   }
   .restaurant article .infos {
-    height: none;
+    height: 60px;
     line-height: 30px;
   }
   .restaurant article h4 {
@@ -626,11 +642,14 @@ img {
   }
 }
 /*** VERSION TABLETTE MENUS.HTML ***/
-@media screen and (min-width: 440px) {
+@media screen and (min-width: 640px) {
+  header {
+    position: relative;
+  }
   header .fas {
-    align-content: center;
-    top: 5px;
-    right: 200px;
+    position: absolute;
+    top: 37px;
+    right: 92%;
     font-size: 30px;
   }
 
@@ -697,8 +716,13 @@ img {
 }
 /*** VERSION DESKTOP MENUS.HTML ***/
 @media screen and (min-width: 1050px) {
+  header {
+    position: relative;
+  }
   header .fas {
-    right: 550px;
+    position: absolute;
+    right: 93%;
+    top: 30px;
     font-size: 40px;
   }
 
@@ -706,7 +730,7 @@ img {
     object-fit: cover;
     height: 400px;
     width: 100%;
-    object-position: 0 -450px;
+    object-position: 0;
   }
 
   .menuMyfood {
@@ -716,7 +740,7 @@ img {
     margin-top: 5px;
     margin-left: 15px;
     text-align: center;
-    width: none;
+    width: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -737,6 +761,7 @@ img {
   .menuMyfood .menuMyfood_list h3 {
     font-size: 21px;
     width: 4%;
+    margin-left: 5px;
   }
 
   /*** MENU NOTE ***/
@@ -747,7 +772,7 @@ img {
     margin-top: 5px;
     margin-left: 15px;
     text-align: center;
-    width: none;
+    width: 0;
     display: flex;
     align-items: center;
     justify-content: center;
