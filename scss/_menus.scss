@@ -6,24 +6,18 @@ main {
 }
 
 header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #FFF;
-  height: 65px;
-  position: relative;
+    @include header ;
+    position: relative;
 
     & .fas{
         color: black;
         position: absolute;
         right: 90%;
-        top: 28px;
+        top: 22px;
         font-size: 19px;
     }
 
     h1 { 
-        font-size: 27px;
-        font-family: 'Shrikhand', cursive;
         margin-bottom: 5px;
     }
 }
@@ -32,6 +26,7 @@ img {
     object-fit: cover;
     height: 250px;
     width: 100%;
+    transform: scale(110%,100%);
 }
 
 .menuMyfood {
