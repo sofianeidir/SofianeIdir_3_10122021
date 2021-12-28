@@ -325,8 +325,8 @@ header h1 {
 img {
   object-fit: cover;
   height: 250px;
-  width: 100%;
-  transform: scale(110%, 100%);
+  width: 96.5%;
+  transform: scale(107%, 100%);
 }
 
 .menuMyfood {
@@ -334,7 +334,7 @@ img {
   flex-direction: column;
   background-color: rgba(233, 233, 233, 0.993);
   width: 100%;
-  height: 1100px;
+  height: 1130px;
   border-radius: 30px 30px 0 0;
   position: relative;
   bottom: 55px;
@@ -368,38 +368,72 @@ img {
   padding-bottom: 5px;
 }
 .menuMyfood_list .menuMyfood_list--bloc {
-  border: 2px solid transparent;
   border-radius: 15px;
-  height: 67px;
+  height: 70px;
   width: 96%;
   background-color: #FFF;
   line-height: 0px;
-  padding-bottom: 15px;
   padding-left: 10px;
   margin-bottom: 15px;
   box-shadow: 0 5px 10px rgba(158, 158, 158, 0.267);
-  position: relative;
   cursor: pointer;
-  animation-timing-function: 900ms;
+  display: flex;
+  overflow: hidden;
 }
-.menuMyfood_list h4 {
-  font-size: 17px;
-  font-weight: 500;
-  margin-bottom: 0px;
+.menuMyfood_list .menuMyfood_list--bloc:hover .menuMyfood_list--animation {
+  transform-origin: right;
+  visibility: visible;
+  /***transform: scaleX(1);***/
+  /*** POURQUOI**/
+  width: 90px;
 }
-.menuMyfood_list p {
-  font-size: 14px;
-  font-weight: 100;
-  max-width: 253px;
-  height: 25px;
-  padding-top: 9px;
+.menuMyfood_list .menuMyfood_list--bloc:hover .menuMyfood_list--animation .fas {
+  transform: rotate(360deg);
+  transition: transform 0.5s;
+}
+.menuMyfood_list .menuMyfood_list--animation {
+  display: flex;
+  justify-content: center;
+  width: 0px;
+  transition: all 1s;
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+}
+.menuMyfood_list .menuMyfood_list--animation .fas {
+  color: #FFF;
+  font-size: 33px;
+  transform: rotate(0deg);
+  margin: auto;
+}
+.menuMyfood_list .menuMyfood_list--title {
+  flex-grow: 1;
+  width: 180px;
+}
+.menuMyfood_list .menuMyfood_list--title p, .menuMyfood_list .menuMyfood_list--title h4 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.menuMyfood_list .menuMyfood_list--title h4 {
+  font-size: 17px;
+  font-weight: 500;
+  padding-top: 20px;
+  margin-bottom: 0px;
+  margin-top: 2px;
+  height: 30px;
+}
+.menuMyfood_list .menuMyfood_list--title p {
+  font-size: 14px;
+  font-weight: 100;
+  max-width: 245px;
+  height: 25px;
+  padding-top: 15px;
+  margin-right: 10px;
+  margin-top: 0;
+}
 .menuMyfood_list .prix {
-  position: absolute;
-  left: 88%;
+  transform: translateY(73%);
+  width: 50px;
   font-weight: 600;
 }
 
@@ -720,7 +754,7 @@ img {
 
   img {
     object-fit: cover;
-    width: 100%;
+    width: 96.5%;
     height: 250px;
   }
 
@@ -730,7 +764,7 @@ img {
   .menuMyfood .menuMyfood--title {
     text-align: center;
     justify-content: center;
-    width: 100%;
+    width: 96.5%;
   }
   .menuMyfood .menuMyfood--title h2 {
     font-size: 30px;
@@ -755,25 +789,22 @@ img {
     height: 80px;
     width: 70%;
     line-height: 0px;
-    padding-bottom: 15px;
     padding-left: 10px;
     margin-bottom: 25px;
     box-shadow: 0 5px 10px rgba(158, 158, 158, 0.267);
-    position: relative;
   }
-  .menuMyfood_list h4 {
+  .menuMyfood_list .menuMyfood_list--bloc h4 {
+    margin-top: 10px;
     font-size: 21px;
     font-weight: 500;
   }
-  .menuMyfood_list p {
+  .menuMyfood_list .menuMyfood_list--bloc p {
     font-size: 19px;
     font-weight: 100;
     overflow: initial;
     text-overflow: initial;
   }
   .menuMyfood_list .prix {
-    position: absolute;
-    left: 88%;
     font-weight: 600;
   }
 
@@ -800,7 +831,7 @@ img {
   img {
     object-fit: cover;
     height: 400px;
-    width: 100%;
+    width: 96.6%;
     object-position: 0;
   }
 
@@ -815,7 +846,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 96.5%;
   }
   .menuMyfood .menuMyfood--title h2 {
     font-size: 40px;
@@ -826,8 +857,8 @@ img {
     left: 20px;
   }
   .menuMyfood .menuMyfood_list {
-    width: 100%;
-    margin-left: 5px;
+    width: 96.5%;
+    margin-left: 15px;
   }
   .menuMyfood .menuMyfood_list h3 {
     font-size: 21px;
@@ -876,21 +907,19 @@ img {
     width: 70%;
     margin: auto;
     line-height: 0px;
-    padding-bottom: 15px;
     padding-left: 10px;
     margin-bottom: 30px;
-    box-shadow: 0 5px 10px rgba(73, 73, 73, 0.781);
-    position: relative;
   }
   .menuMyfood_list .menuMyfood_list--bloc h4 {
     font-size: 21px;
+    margin-top: 9px;
+    height: 35px;
   }
   .menuMyfood_list .menuMyfood_list--bloc p {
+    padding-top: 10px;
     font-size: 17px;
   }
   .menuMyfood_list .menuMyfood_list--bloc .prix {
-    position: absolute;
-    left: 95%;
     top: 35px;
   }
 }
