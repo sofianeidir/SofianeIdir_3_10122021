@@ -41,6 +41,7 @@
             height: 65px;
             width: 300px;
             font-size: 19px;
+            margin: auto;
         }
     }  
 
@@ -69,14 +70,15 @@
                 margin-bottom: 25px;
 
                 & .fas {
-                    font-size: 23px;
-                    top: 1px;
+                    font-size: 25px;
+                    top: 4px;
                     left: 20px;
                 }
 
                 & .functioning_block--text {
-                    left: 80px;
-                    font-size: 27px;
+                    left: 115px;
+                    top: 5px;
+                    font-size: 29px;
                     font-weight: 500;
                 }
 
@@ -97,7 +99,7 @@
 
         article {
             height: 365px;
-            box-shadow: 0px 7px 10px rgba(46, 46, 46, 0.932);
+
             .picture_Myfood {
                 height: 78%;
                 img {
@@ -128,8 +130,8 @@
                 }
            
                 & .far {
-                    left: 95%;
-                    bottom: 23px;
+                    left: 94%;
+                    bottom: 30px;
                     font-size: 25px;
                 }   
         } 
@@ -140,9 +142,10 @@
             position: relative;
                 
             & p {
-                height: 25px;
+                line-height: 32px;
+                height: 36px;
                 width: 90px;
-                bottom: 310px;
+                bottom: 300px;
                 right: 20px;
                 }
         }
@@ -181,10 +184,16 @@
 
         & h3 {
             text-align: center;
-        }
+        }  
 
         .functioning_block--element {
-            box-shadow: 0 7px 11px rgb(0, 0, 0);
+            
+            & .numbers {
+                @include cercle; 
+                width: 35px;
+                height: 35px;
+                line-height: 35px;
+            }
         }    
     }
     /**PARTIE RESTAURANTS**/
@@ -209,14 +218,13 @@
         article {
             width: 46%;
             height: 355px;
-            box-shadow: 0px 7px 10px rgba(46, 46, 46, 0.932);
+
                 .picture_Myfood {
                     height: 280px;
 
                     img {
                         object-position: 0 0;
-                        height: 100%; 
-                        object-fit: cover;
+                        height: 100%;
                     }
                 }
                
@@ -224,7 +232,7 @@
                     height: 280px;
 
                     img { 
-                    object-position: 0 0;
+                    object-position: 0 -200px;
                     width: 100%;  
                     }
                     
@@ -233,6 +241,7 @@
                 .infos {
                     height: 60px;
                     line-height: 30px;
+                    margin-left: 0;
                 }
     
                 & h4 {
@@ -256,9 +265,9 @@
             position: relative;
                 
             & p {
-                height: 25px;
+                height: 35px;
                 width: 90px;
-                bottom: 305px;
+                bottom: 290px;
                 right: 20px;
                 }
         
@@ -342,7 +351,8 @@
         & p {
             font-size: 19px;
             font-weight: 100;
-            
+            overflow: initial;
+            text-overflow: initial;
         }
     
         .prix {
@@ -350,6 +360,10 @@
             left: 88%;
             font-weight: 600;
         }
+    }
+
+    .menuNote {
+        height: 1490px
     }
 
     footer {
@@ -487,13 +501,31 @@
 
 
 /*** AGENCEMENT PHOTOS INDEX.HTML ***/
-@media screen and (min-width: 1350px) {
+@media screen and (min-width: 1200px) {
     
     .restaurant {
-    article {
+        article {
+            .picture_Myfood{
+                img {
+                    object-position: 0 -90px;
+                }
+            }
         
-            img {
-                object-position: 0 -90px;
+            .picture_Note img{ 
+                object-position: 0 -250px;
+            }
+    }
+}
+} 
+
+@media screen and (min-width: 1500px) {
+    
+    .restaurant {
+        article {
+            .picture_Myfood{
+                img {
+                    object-position: 0 -150px;
+                }
             }
         
             .picture_Note img{ 

@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     background: #FFF;
-    height: 55px;
+    height: 60px;
     width: 100%;
 }
 
@@ -37,7 +37,7 @@
 }
 
 @mixin button {
-    background-color: $color-button;
+    background: $gradient-color;
     color: #FFF;
     box-shadow: 0 5px 10px rgba(48, 48, 48, 0.479);
     width: 175px;
@@ -47,9 +47,14 @@
     display: flex;
     justify-content: center;
     margin: auto;
-    margin-top: 35px;
+    margin-top: 20px;
     font-size: 17px;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
+
+    &:hover{
+        box-shadow: 0 5px 20px rgba(48, 48, 48, 0.993);
+        background: linear-gradient(#ff79d9cc, #9256dccb)
+    }
 }
 

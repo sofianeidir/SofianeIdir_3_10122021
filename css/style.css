@@ -5,7 +5,7 @@
 }
 
 body {
-  margin: 0;
+  margin: auto 0;
 }
 
 main {
@@ -25,19 +25,20 @@ header {
   justify-content: center;
   align-items: center;
   background: #FFF;
-  height: 55px;
+  height: 60px;
   width: 100%;
 }
 header h1 {
-  font-size: 27px;
+  font-size: 29px;
+  font-weight: 100;
   margin-top: 20px;
   font-family: "Shrikhand", cursive;
 }
 
 /**RECHERCHES**/
 .reservation_menus {
-  background-color: #ddd9d942;
-  height: 300px;
+  background-color: #92929215;
+  height: 330px;
   width: 100%;
   text-align: center;
 }
@@ -50,7 +51,7 @@ form {
 }
 form .header_form {
   padding-top: 15px;
-  margin-left: 40px;
+  margin-left: 30px;
 }
 form .header_form--input {
   border: none;
@@ -58,6 +59,7 @@ form .header_form--input {
   background: transparent;
 }
 form ::placeholder {
+  padding-left: 5px;
   font-size: 16px;
   color: rgba(26, 26, 26, 0.808);
   font-weight: 400;
@@ -66,8 +68,12 @@ form :focus::placeholder {
   opacity: 0;
 }
 
+.reservation_text {
+  height: 190px;
+}
 .reservation_text h2 {
   font-size: 23px;
+  font-weight: 500;
   max-width: 270px;
   margin: 35px auto;
   margin-bottom: 0;
@@ -75,18 +81,33 @@ form :focus::placeholder {
 .reservation_text p {
   font-size: 17px;
   font-weight: 100;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  margin-top: 10px;
   color: rgba(78, 78, 78, 0.911);
 }
 .reservation_text .reservation_text--button {
-  background-color: #C968DB;
-  border-radius: 30px;
-  height: 45px;
-  width: 200px;
-  border: none;
-  box-shadow: 2px 6px 10px rgba(129, 129, 129, 0.616);
+  background: linear-gradient(#FF79DA, #9356DC);
   color: #FFF;
-  font-size: 14px;
+  box-shadow: 0 5px 10px rgba(48, 48, 48, 0.479);
+  width: 175px;
+  height: 50px;
+  border-radius: 30px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 20px;
+  font-size: 17px;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  width: 205px;
+  font-size: 14px;
+  margin-left: 95px;
+}
+.reservation_text .reservation_text--button:hover {
+  box-shadow: 0 5px 20px rgba(48, 48, 48, 0.993);
+  background: linear-gradient(#ff79d9cc, #9256dccb);
 }
 
 /**PARTIE FONCTIONNEMENT**/
@@ -94,9 +115,10 @@ form :focus::placeholder {
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 440px;
 }
 .functioning h3 {
-  padding: 40px 0 10px 20px;
+  padding: 55px 0 10px 20px;
   margin: 0;
   font-size: 24px;
 }
@@ -119,6 +141,14 @@ form :focus::placeholder {
   height: 70px;
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.137);
   cursor: pointer;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+.functioning_block--element:hover {
+  background: rgba(228, 215, 250, 0.527);
+}
+.functioning_block--element:hover .fas {
+  color: #9356DC;
 }
 .functioning_block--element .numbers {
   border: 1px solid transparent;
@@ -135,16 +165,15 @@ form :focus::placeholder {
 }
 .functioning_block--element .fas {
   font-size: 19px;
-  max-width: 3px;
   position: relative;
-  top: 1px;
-  left: 5px;
+  top: 3px;
+  left: 9px;
   color: rgba(68, 68, 68, 0.733);
 }
 .functioning_block--element .functioning_block--text {
-  position: relative;
-  left: 43px;
-  top: 3px;
+  position: absolute;
+  left: 77px;
+  top: 13px;
   font-size: 17px;
   font-weight: 500;
 }
@@ -152,12 +181,12 @@ form :focus::placeholder {
 /**PARTIE RESTAURANTS**/
 .restaurant {
   width: 100%;
-  height: 1130px;
+  height: 1135px;
   background-color: #99999917;
 }
 .restaurant h3 {
   font-size: 24px;
-  padding: 40px 0 10px 20px;
+  padding: 55px 0 10px 20px;
   margin: 0;
 }
 
@@ -193,7 +222,7 @@ article .picture_Note img {
 }
 article .infos {
   height: 20px;
-  margin: 7px 0 0 10px;
+  margin: 5px 0 0 10px;
   line-height: 19px;
   width: 100%;
 }
@@ -210,9 +239,10 @@ article p {
 }
 article .far {
   position: absolute;
-  left: 90%;
-  bottom: 27px;
+  left: 87%;
+  bottom: 25px;
   color: black;
+  font-size: 22px;
 }
 
 /**ETIQUETTE NOUVEAU**/
@@ -228,12 +258,12 @@ article .far {
   line-height: 22px;
   border: 2px solid transparent;
   background-color: #99E2D0;
-  color: rgba(52, 85, 37, 0.986);
-  height: 25px;
-  width: 70px;
-  font-weight: 500;
+  color: #008766;
+  height: 26px;
+  width: 75px;
+  font-weight: 400;
   position: absolute;
-  bottom: 169px;
+  bottom: 164px;
   right: 10px;
 }
 
@@ -277,7 +307,7 @@ header {
   justify-content: center;
   align-items: center;
   background: #FFF;
-  height: 55px;
+  height: 60px;
   width: 100%;
   position: relative;
 }
@@ -289,7 +319,7 @@ header .fas {
   font-size: 19px;
 }
 header h1 {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 img {
@@ -304,7 +334,7 @@ img {
   flex-direction: column;
   background-color: rgba(233, 233, 233, 0.993);
   width: 100%;
-  height: 1070px;
+  height: 1100px;
   border-radius: 30px 30px 0 0;
   position: relative;
   bottom: 55px;
@@ -328,12 +358,14 @@ img {
 
 .menuMyfood_list {
   margin-left: 15px;
+  margin-bottom: 10px;
 }
 .menuMyfood_list h3 {
   font-size: 16px;
   font-weight: 300;
   border-bottom: 3px solid #99E2D0;
   width: 11%;
+  padding-bottom: 5px;
 }
 .menuMyfood_list .menuMyfood_list--bloc {
   border: 2px solid transparent;
@@ -348,14 +380,22 @@ img {
   box-shadow: 0 5px 10px rgba(158, 158, 158, 0.267);
   position: relative;
   cursor: pointer;
+  animation-timing-function: 900ms;
 }
 .menuMyfood_list h4 {
   font-size: 17px;
   font-weight: 500;
+  margin-bottom: 0px;
 }
 .menuMyfood_list p {
   font-size: 14px;
   font-weight: 100;
+  max-width: 253px;
+  height: 25px;
+  padding-top: 9px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menuMyfood_list .prix {
   position: absolute;
@@ -364,7 +404,7 @@ img {
 }
 
 .menuMyfood--button {
-  background-color: #C968DB;
+  background: linear-gradient(#FF79DA, #9356DC);
   color: #FFF;
   box-shadow: 0 5px 10px rgba(48, 48, 48, 0.479);
   width: 175px;
@@ -374,14 +414,18 @@ img {
   display: flex;
   justify-content: center;
   margin: auto;
-  margin-top: 35px;
+  margin-top: 20px;
   font-size: 17px;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
+.menuMyfood--button:hover {
+  box-shadow: 0 5px 20px rgba(48, 48, 48, 0.993);
+  background: linear-gradient(#ff79d9cc, #9256dccb);
+}
 
 .menuNote {
-  height: 1185px;
+  height: 1215px;
   display: flex;
   flex-direction: column;
   background-color: rgba(233, 233, 233, 0.993);
@@ -407,7 +451,7 @@ img {
   font-size: 25px;
 }
 .menuNote .menuMyfood--button {
-  background-color: #C968DB;
+  background: linear-gradient(#FF79DA, #9356DC);
   color: #FFF;
   box-shadow: 0 5px 10px rgba(48, 48, 48, 0.479);
   width: 175px;
@@ -417,11 +461,15 @@ img {
   display: flex;
   justify-content: center;
   margin: auto;
-  margin-top: 35px;
+  margin-top: 20px;
   font-size: 17px;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-  margin-top: 35px;
+  margin-top: 25px;
+}
+.menuNote .menuMyfood--button:hover {
+  box-shadow: 0 5px 20px rgba(48, 48, 48, 0.993);
+  background: linear-gradient(#ff79d9cc, #9256dccb);
 }
 
 /*** VERSION TABLETTE INDEX.HTML ***/
@@ -458,6 +506,7 @@ img {
     height: 65px;
     width: 300px;
     font-size: 19px;
+    margin: auto;
   }
 
   form ::placeholder {
@@ -483,13 +532,14 @@ img {
     margin-bottom: 25px;
   }
   .functioning .functioning_block--element .fas {
-    font-size: 23px;
-    top: 1px;
+    font-size: 25px;
+    top: 4px;
     left: 20px;
   }
   .functioning .functioning_block--element .functioning_block--text {
-    left: 80px;
-    font-size: 27px;
+    left: 115px;
+    top: 5px;
+    font-size: 29px;
     font-weight: 500;
   }
 
@@ -507,7 +557,6 @@ img {
   }
   .restaurant article {
     height: 365px;
-    box-shadow: 0px 7px 10px rgba(46, 46, 46, 0.932);
   }
   .restaurant article .picture_Myfood {
     height: 78%;
@@ -534,8 +583,8 @@ img {
     font-size: 19px;
   }
   .restaurant article .far {
-    left: 95%;
-    bottom: 23px;
+    left: 94%;
+    bottom: 30px;
     font-size: 25px;
   }
   .restaurant .container_articles--relative {
@@ -545,9 +594,10 @@ img {
     position: relative;
   }
   .restaurant .container_articles--relative p {
-    height: 25px;
+    line-height: 32px;
+    height: 36px;
     width: 90px;
-    bottom: 310px;
+    bottom: 300px;
     right: 20px;
   }
 
@@ -571,8 +621,21 @@ img {
   .functioning h3 {
     text-align: center;
   }
-  .functioning .functioning_block--element {
-    box-shadow: 0 7px 11px black;
+  .functioning .functioning_block--element .numbers {
+    border: 1px solid transparent;
+    background-color: #9356DC;
+    border-radius: 50%;
+    width: 27px;
+    height: 27px;
+    text-align: center;
+    line-height: 27px;
+    color: #FFF;
+    position: relative;
+    right: 14px;
+    top: 4px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
   }
 
   /**PARTIE RESTAURANTS**/
@@ -595,7 +658,6 @@ img {
   .restaurant article {
     width: 46%;
     height: 355px;
-    box-shadow: 0px 7px 10px rgba(46, 46, 46, 0.932);
   }
   .restaurant article .picture_Myfood {
     height: 280px;
@@ -603,18 +665,18 @@ img {
   .restaurant article .picture_Myfood img {
     object-position: 0 0;
     height: 100%;
-    object-fit: cover;
   }
   .restaurant article .picture_Note {
     height: 280px;
   }
   .restaurant article .picture_Note img {
-    object-position: 0 0;
+    object-position: 0 -200px;
     width: 100%;
   }
   .restaurant article .infos {
     height: 60px;
     line-height: 30px;
+    margin-left: 0;
   }
   .restaurant article h4 {
     font-size: 21px;
@@ -634,9 +696,9 @@ img {
     position: relative;
   }
   .restaurant .container_articles--relative p {
-    height: 25px;
+    height: 35px;
     width: 90px;
-    bottom: 305px;
+    bottom: 290px;
     right: 20px;
   }
 
@@ -706,11 +768,17 @@ img {
   .menuMyfood_list p {
     font-size: 19px;
     font-weight: 100;
+    overflow: initial;
+    text-overflow: initial;
   }
   .menuMyfood_list .prix {
     position: absolute;
     left: 88%;
     font-weight: 600;
+  }
+
+  .menuNote {
+    height: 1490px;
   }
 
   footer {
@@ -827,9 +895,17 @@ img {
   }
 }
 /*** AGENCEMENT PHOTOS INDEX.HTML ***/
-@media screen and (min-width: 1350px) {
-  .restaurant article img {
+@media screen and (min-width: 1200px) {
+  .restaurant article .picture_Myfood img {
     object-position: 0 -90px;
+  }
+  .restaurant article .picture_Note img {
+    object-position: 0 -250px;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .restaurant article .picture_Myfood img {
+    object-position: 0 -150px;
   }
   .restaurant article .picture_Note img {
     object-position: 0 -350px;

@@ -8,7 +8,7 @@
 }
 
 body {
-    margin: 0;
+    margin: auto 0;
   }
   
 main {
@@ -27,7 +27,8 @@ header {
     @include header;
     
     h1{
-        font-size: 27px;
+        font-size: 29px;
+        font-weight: 100;
         margin-top: 20px;
         font-family: 'Shrikhand', cursive;
     }
@@ -35,8 +36,8 @@ header {
 
 /**RECHERCHES**/
 .reservation_menus{
-    background-color: #ddd9d942;
-    height: 300px;
+    background-color: #92929215;
+    height: 330px;
     width: 100%;
     text-align: center;
 }
@@ -49,7 +50,7 @@ header {
     
         .header_form {
         padding-top: 15px;
-        margin-left: 40px;
+        margin-left: 30px;
         }
 
         .header_form--input{
@@ -59,6 +60,7 @@ header {
         }
 
         & ::placeholder {
+            padding-left: 5px;
             font-size: 16px;
             color: rgba(26, 26, 26, 0.808);
             font-weight: 400;
@@ -70,9 +72,12 @@ header {
 }
 
     .reservation_text {
+        
+        height: 190px;
     
         & h2 { 
             font-size: 23px;
+            font-weight: 500;
             max-width: 270px;
             margin: 35px auto;
             margin-bottom: 0;
@@ -81,19 +86,17 @@ header {
         
             font-size: 17px ;
             font-weight: 100;
+            padding-bottom: 10px;
+            padding-left: 25px;
+            margin-top: 10px;
             color: rgba(78, 78, 78, 0.911);
         }   
 
         & .reservation_text--button {
-            background-color: $color-button;
-            border-radius: 30px;
-            height: 45px;
-            width: 200px;
-            border: none;
-            box-shadow: 2px 6px 10px rgba(129, 129, 129, 0.616);
-            color: #FFF;
+            @include button;
+            width: 205px;
             font-size: 14px;
-            cursor: pointer;
+            margin-left: 95px;
         }
 }
 
@@ -102,9 +105,10 @@ header {
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 440px;
 
     & h3 {
-        padding: 40px 0 10px 20px ;
+        padding: 55px 0 10px 20px ;
         margin: 0;
         font-size: $title-size;
         }
@@ -121,6 +125,15 @@ header {
     
     .functioning_block--element {
         @include tabs;
+        position: relative;
+        -webkit-tap-highlight-color: transparent;
+        
+        &:hover {
+            background: rgba(228, 215, 250, 0.527);
+            & .fas {
+                color: $primary-color;
+            }
+        }
         
         & .numbers {
             @include cercle; 
@@ -128,17 +141,16 @@ header {
 
         & .fas {
             font-size: 19px;
-            max-width: 3px;
             position: relative;
-            top: 1px;
-            left: 5px;
+            top: 3px;
+            left: 9px;
             color: rgba(68, 68, 68, 0.733);
         }
 
         & .functioning_block--text {
-           position: relative;
-           left: 43px;
-           top: 3px;
+           position: absolute;
+           left: 77px;
+           top: 13px;
            font-size: 17px;
            font-weight: 500;
         }
@@ -148,12 +160,12 @@ header {
 /**PARTIE RESTAURANTS**/
 .restaurant {
     width: 100%;
-    height: 1130px;
+    height: 1135px;
     background-color: #99999917;
 
     h3 {
         font-size: $title-size;
-        padding: 40px 0 10px 20px ;
+        padding: 55px 0 10px 20px ;
         margin: 0;
         }
     }
@@ -192,7 +204,7 @@ header {
 
             .infos {
                 height: 20px;
-                margin: 7px 0 0 10px;
+                margin: 5px 0 0 10px;
                 line-height: 19px;
                 width: 100%;
             }
@@ -212,9 +224,10 @@ header {
        
             & .far {
                 position: absolute;
-                left: 90%;
-                bottom: 27px;
+                left: 87%;
+                bottom: 25px;
                 color: black;
+                font-size: 22px;
             }     
 
 }
@@ -232,12 +245,12 @@ header {
         line-height: 22px;
         border: 2px solid transparent;
         background-color: $tertiary-color;
-        color: rgba(52, 85, 37, 0.986);
-        height: 25px;
-        width: 70px;
-        font-weight: 500;
+        color: rgba(-0, 135, 102, 1);
+        height: 26px;
+        width: 75px;
+        font-weight: 400;
         position: absolute;
-        bottom: 169px;
+        bottom: 164px;
         right: 10px;
         }
 
