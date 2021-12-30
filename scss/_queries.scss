@@ -329,8 +329,17 @@
             .far {
                 font-size: 25px ;
                 position: relative;
-                left: 20px
+                left: 20px;
+                z-index: 0;
             }
+             .fas {
+                position: relative;
+                left: -10px;
+                top: 0px;
+                font-size: 26px;
+                z-index: 1;
+           
+            }      
         }
     } 
     .menuMyfood_list{ 
@@ -361,8 +370,6 @@
         & p {
             font-size: 19px;
             font-weight: 100;
-            overflow: initial;
-            text-overflow: initial;
         }
     }
     
@@ -370,9 +377,55 @@
             font-weight: 600;
         }
     }
+    
+        .menuMyfood_list{
 
+            .menuMyfood_list--blocDelice {
+                height: 110px;
+                width: 70%;
+                margin: 25px auto ;
+                & h4 {
+                    margin-top: 20px;
+                    font-size: 21px;
+                    font-weight: 500;
+                    padding-top: 0;
+                }
+                
+                & p {
+                    font-size: 19px;
+                    font-weight: 100;
+                }
+        
+            }
+        }    
+    
+/***** MENU NOTE *****/
     .menuNote {
-        height: 1490px
+        height: 1490px;
+        .menuNote--title {
+           
+            text-align: center;
+            justify-content: center;
+            width: 96.5%;
+            h2 {
+                font-size: 30px;
+            }
+
+        .far {
+            font-size: 25px ;
+            position: relative;
+            left: 20px;
+            z-index: 0;
+        }
+         .fas {
+            position: relative;
+            left: -10px;
+            top: 0px;
+            font-size: 26px;
+            z-index: 1;
+       
+        }    
+    }  
     }
 
     footer {

@@ -1,0 +1,134 @@
+ /***** KEYFRAMES !!!!!!!!***/
+ @keyframes teste1 {
+    0% {
+        opacity: 0;
+    }
+    20%{opacity: 0.2;}
+    50%{opacity: 1;}
+    100% { 
+        opacity: 1;
+    }
+}
+@keyframes teste2 {
+    0% {
+        opacity: 0;
+    }
+    20%{opacity: 0;}
+    
+    55% { 
+        opacity: 0.2;
+    }
+    
+    100% { 
+        opacity: 1;
+    }
+}
+@keyframes teste3 {
+    0% { opacity: 0;}
+    20%{opacity: 0;}
+    30%{opacity: 0;}
+    60% { 
+        opacity: 0;
+    }
+    70% {opacity: 0;}
+    80%{opacity: 0.2;}
+
+    100% { opacity: 1;}
+}
+
+@keyframes Note4 {
+    0% { opacity: 0;}
+    20%{opacity: 0;}
+    30%{opacity: 0;}
+    60% { 
+        opacity: 0;
+    }
+    70% {opacity: 0;}
+    80%{opacity: 0;}
+    0%{opacity: 0.2;}
+
+    100% { opacity: 1;}
+}
+
+
+@keyframes menuTeste{
+from {
+        opacity: 0;
+    }
+    70%{opacity: 0;}
+    80%{opacity: 0.3;}
+    90%{opacity: 0.5;
+
+    }
+ to {
+     opacity: 1;
+ }
+}
+
+ /**** LISTES ENTREE ETC ***/
+
+   .menuMyfood_list--1{
+    animation-name: menuTeste ;
+    animation-duration: 1s;
+    }
+    
+    .menuMyfood_list--2{
+        animation-name: menuTeste ;
+       animation-duration: 2s;
+    }
+    
+    .menuMyfood_list--3{
+        animation-name: menuTeste ;
+       animation-duration:3s;
+     
+    }
+
+    .menuMyfood_list--bloc_Note {
+            animation-name: Note4;
+            animation-duration: 1.5s;
+    }    
+        
+  /**DIV INFORMATIONS ****/
+   .menuMyfood_list--bloc_1 {
+        animation-name: teste1;
+        animation-duration: 1.5s;
+    }
+    .menuMyfood_list--bloc_2 { 
+       animation-name: teste2;
+        animation-duration: 1.5s;
+    }
+    
+    .menuMyfood_list--bloc_3 {
+        animation-name: teste3;
+        animation-duration: 1.5s;
+    }
+    
+    .menuMyfood_list--bloc_4 {
+        animation-name: teste1;
+        animation-duration: 2.5s;
+        
+    }
+    .menuMyfood_list--bloc_5 {
+        animation-name: teste2;
+        animation-duration: 2.5s;
+        
+    }
+    .menuMyfood_list--bloc_6 {
+        animation-name: teste3;
+        animation-duration: 2.5s;
+    
+    }
+    .menuMyfood_list--bloc_7 {
+        animation-name: teste1;
+        animation-duration: 3.5s;
+       
+    }
+    .menuMyfood_list--bloc_8 {
+        animation-name: teste2;
+        animation-duration: 3.5s;
+       
+    }
+    .menuMyfood_list--bloc_9 {
+        animation-name: teste3;
+        animation-duration: 3.5s;
+    }

@@ -10,6 +10,7 @@
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -24,7 +25,6 @@ main {
 a {
   text-decoration: none;
   color: #FFF;
-  -webkit-tap-highlight-color: transparent;
 }
 
 /**HEADER**/
@@ -252,7 +252,6 @@ article .far {
   color: black;
   font-size: 22px;
   z-index: 0;
-  width: 25px;
 }
 article .fas {
   position: absolute;
@@ -272,7 +271,7 @@ article .icones:hover .far {
   opacity: 0;
 }
 article .icones:hover .fas {
-  transition-duration: 4s;
+  transition-duration: 3s;
   opacity: 1;
 }
 
@@ -384,7 +383,29 @@ img {
   font-size: 27px;
 }
 .menuMyfood .menuMyfood--title .far {
+  font-size: 24px;
+  z-index: 0;
+}
+.menuMyfood .menuMyfood--title .fas {
+  position: absolute;
+  left: 82.4%;
+  top: 30px;
   font-size: 25px;
+  z-index: 1;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  opacity: 0;
+  width: 35px;
+}
+.menuMyfood .menuMyfood--title:hover .far {
+  transition-duration: 3s;
+  opacity: 0;
+}
+.menuMyfood .menuMyfood--title:hover .fas {
+  transition-duration: 3s;
+  opacity: 1;
 }
 
 .menuMyfood_list {
@@ -414,9 +435,7 @@ img {
 .menuMyfood_list .menuMyfood_list--bloc:hover .menuMyfood_list--animation {
   transform-origin: right;
   visibility: visible;
-  /***transform: scaleX(1);***/
-  /*** POURQUOI**/
-  width: 90px;
+  width: 70px;
 }
 .menuMyfood_list .menuMyfood_list--bloc:hover .menuMyfood_list--animation .fas {
   transform: rotate(360deg);
@@ -432,7 +451,7 @@ img {
 }
 .menuMyfood_list .menuMyfood_list--animation .fas {
   color: #FFF;
-  font-size: 33px;
+  font-size: 27px;
   transform: rotate(0deg);
   margin: auto;
 }
@@ -462,8 +481,51 @@ img {
   margin-right: 10px;
   margin-top: 0;
 }
-.menuMyfood_list .prix {
-  transform: translateY(73%);
+.menuMyfood_list .menuMyfood_list--blocDelice {
+  height: 90px;
+  border-radius: 15px;
+  width: 96%;
+  background-color: #FFF;
+  padding-left: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 10px rgba(158, 158, 158, 0.267);
+  cursor: pointer;
+  display: flex;
+  overflow: hidden;
+}
+.menuMyfood_list .menuMyfood_list--blocDelice:hover .menuMyfood_list--animation {
+  transform-origin: right;
+  visibility: visible;
+  width: 70px;
+}
+.menuMyfood_list .menuMyfood_list--blocDelice:hover .menuMyfood_list--animation .fas {
+  transform: rotate(360deg);
+  transition: transform 0.5s;
+}
+.menuMyfood_list .menuMyfood_list--titleDelice {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+.menuMyfood_list .menuMyfood_list--titleDelice h4 {
+  font-size: 17px;
+  font-weight: 500;
+  max-width: 240px;
+  padding-top: 15px;
+  margin-bottom: 0px;
+  margin-top: 2px;
+}
+.menuMyfood_list .menuMyfood_list--titleDelice p {
+  font-size: 14px;
+  font-weight: 100;
+  height: 25px;
+  margin: 0;
+  padding-top: 3px;
+}
+
+.prix {
+  transform: translateY(65%);
   width: 50px;
   font-weight: 600;
 }
@@ -489,6 +551,7 @@ img {
   background: linear-gradient(#ff79d9cc, #9256dccb);
 }
 
+/****** MENU NOTE ******/
 .menuNote {
   height: 1215px;
   display: flex;
@@ -507,15 +570,38 @@ img {
   align-items: center;
   justify-content: space-between;
 }
+.menuNote .menuNote--title .far {
+  font-size: 25px;
+  z-index: 0;
+}
+.menuNote .menuNote--title .fas {
+  position: absolute;
+  left: 82.4%;
+  top: 30px;
+  font-size: 25px;
+  z-index: 1;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  opacity: 0;
+  width: 35px;
+}
+.menuNote .menuNote--title:hover .far {
+  transition-duration: 3s;
+  opacity: 0;
+}
+.menuNote .menuNote--title:hover .fas {
+  transition-duration: 3s;
+  opacity: 1;
+}
 .menuNote h2 {
   font-family: "Shrikhand", cursive;
   font-weight: 400;
   font-size: 27px;
 }
-.menuNote .far {
-  font-size: 25px;
-}
-.menuNote .menuMyfood--button {
+
+.menuMyfood--button {
   background: linear-gradient(#FF79DA, #9356DC);
   color: #FFF;
   box-shadow: 0 5px 10px rgba(48, 48, 48, 0.479);
@@ -532,7 +618,7 @@ img {
   -webkit-tap-highlight-color: transparent;
   margin-top: 25px;
 }
-.menuNote .menuMyfood--button:hover {
+.menuMyfood--button:hover {
   box-shadow: 0 5px 20px rgba(48, 48, 48, 0.993);
   background: linear-gradient(#ff79d9cc, #9256dccb);
 }
@@ -816,6 +902,14 @@ img {
     font-size: 25px;
     position: relative;
     left: 20px;
+    z-index: 0;
+  }
+  .menuMyfood .menuMyfood--title .fas {
+    position: relative;
+    left: -10px;
+    top: 0px;
+    font-size: 26px;
+    z-index: 1;
   }
 
   .menuMyfood_list {
@@ -844,15 +938,51 @@ img {
   .menuMyfood_list .menuMyfood_list--bloc p {
     font-size: 19px;
     font-weight: 100;
-    overflow: initial;
-    text-overflow: initial;
   }
   .menuMyfood_list .prix {
     font-weight: 600;
   }
 
+  .menuMyfood_list .menuMyfood_list--blocDelice {
+    height: 110px;
+    width: 70%;
+    margin: 25px auto;
+  }
+  .menuMyfood_list .menuMyfood_list--blocDelice h4 {
+    margin-top: 20px;
+    font-size: 21px;
+    font-weight: 500;
+    padding-top: 0;
+  }
+  .menuMyfood_list .menuMyfood_list--blocDelice p {
+    font-size: 19px;
+    font-weight: 100;
+  }
+
+  /***** MENU NOTE *****/
   .menuNote {
     height: 1490px;
+  }
+  .menuNote .menuNote--title {
+    text-align: center;
+    justify-content: center;
+    width: 96.5%;
+  }
+  .menuNote .menuNote--title h2 {
+    font-size: 30px;
+  }
+  .menuNote .menuNote--title .far {
+    font-size: 25px;
+    position: relative;
+    left: 20px;
+    z-index: 0;
+  }
+  .menuNote .menuNote--title .fas {
+    position: relative;
+    left: -10px;
+    top: 0px;
+    font-size: 26px;
+    z-index: 1;
   }
 
   footer {
@@ -982,6 +1112,167 @@ img {
   .restaurant article .picture_Note img {
     object-position: 0 -350px;
   }
+}
+/***** KEYFRAMES !!!!!!!!***/
+@keyframes teste1 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes teste2 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  55% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes teste3 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes Note4 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes menuTeste {
+  from {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/**** LISTES ENTREE ETC ***/
+.menuMyfood_list--1 {
+  animation-name: menuTeste;
+  animation-duration: 1s;
+}
+
+.menuMyfood_list--2 {
+  animation-name: menuTeste;
+  animation-duration: 2s;
+}
+
+.menuMyfood_list--3 {
+  animation-name: menuTeste;
+  animation-duration: 3s;
+}
+
+.menuMyfood_list--bloc_Note {
+  animation-name: Note4;
+  animation-duration: 1.5s;
+}
+
+/**DIV INFORMATIONS ****/
+.menuMyfood_list--bloc_1 {
+  animation-name: teste1;
+  animation-duration: 1.5s;
+}
+
+.menuMyfood_list--bloc_2 {
+  animation-name: teste2;
+  animation-duration: 1.5s;
+}
+
+.menuMyfood_list--bloc_3 {
+  animation-name: teste3;
+  animation-duration: 1.5s;
+}
+
+.menuMyfood_list--bloc_4 {
+  animation-name: teste1;
+  animation-duration: 2.5s;
+}
+
+.menuMyfood_list--bloc_5 {
+  animation-name: teste2;
+  animation-duration: 2.5s;
+}
+
+.menuMyfood_list--bloc_6 {
+  animation-name: teste3;
+  animation-duration: 2.5s;
+}
+
+.menuMyfood_list--bloc_7 {
+  animation-name: teste1;
+  animation-duration: 3.5s;
+}
+
+.menuMyfood_list--bloc_8 {
+  animation-name: teste2;
+  animation-duration: 3.5s;
+}
+
+.menuMyfood_list--bloc_9 {
+  animation-name: teste3;
+  animation-duration: 3.5s;
 }
 
 /*# sourceMappingURL=style.css.map */

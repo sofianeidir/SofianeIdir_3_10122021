@@ -54,10 +54,38 @@ img {
         }
 
         .far {
-            font-size: 25px ;
-        }
+            font-size: 24px ;
+            z-index: 0;
+        }  
+        
+        & .fas {
+            position: absolute;
+            left: 82.4%;
+            top: 30px;
+            font-size: 25px;
+            z-index: 1;
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            background-image: linear-gradient(#9356DC,#FF79DA);
+            opacity: 0;
+            width: 35px;
+        }      
+            &:hover {
+                .far {
+                    transition-duration: 3s;
+                    opacity: 0;
+                }
+                .fas {
+                    transition-duration: 3s;
+                    opacity: 1;
+                }
+            } 
     }
+
+    
 }
+
 
 .menuMyfood_list{ 
     margin-left: 15px;
@@ -89,8 +117,7 @@ img {
             .menuMyfood_list--animation {
                 transform-origin: right;
                 visibility: visible;
-                /***transform: scaleX(1);***/ /*** POURQUOI**/
-                width: 90px;
+                width: 70px;
                 & .fas {
                     transform:rotate(360deg) ;
                     transition: transform .5s;
@@ -98,7 +125,7 @@ img {
             }
         }
     }
-    & .menuMyfood_list--animation {
+    .menuMyfood_list--animation {
         display: flex;
         justify-content: center;
         width: 0px;
@@ -108,7 +135,7 @@ img {
 
         & .fas {
             color: #FFF;
-            font-size: 33px;
+            font-size: 27px;
             transform: rotate(0deg);
             margin: auto;
         }
@@ -140,21 +167,72 @@ img {
             padding-top: 15px; 
             margin-right: 10px;
             margin-top: 0;
-        }
-    
+        }  
     }
 
+    .menuMyfood_list--blocDelice {
+        height: 90px;
+        border-radius: 15px;
+        width: 96%;
+        background-color: #FFF;
+        padding-left: 10px;
+        margin-bottom: 15px;
+        box-shadow: 0 5px 10px rgba(158, 158, 158, 0.267);
+        cursor: pointer;
+        display: flex;
+        overflow: hidden;
+
+        &:hover {
+
+            .menuMyfood_list--animation {
+                transform-origin: right;
+                visibility: visible;
+                width: 70px;
+                & .fas {
+                    transform:rotate(360deg) ;
+                    transition: transform .5s;
+                }
+            } 
+
+        }  
+    } 
+        
+
+        .menuMyfood_list--titleDelice {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            flex-grow: 1;
+
+           
+            h4 {
+                font-size: 17px;
+                font-weight: 500;
+                max-width: 240px;
+                padding-top: 15px;
+                margin-bottom: 0px; 
+                margin-top: 2px;
+            }
+            & p {
+                font-size: 14px;
+                font-weight: 100;
+                height: 25px;
+                margin: 0;
+                padding-top: 3px;
+            }
+    }
+}
     .prix {
-        transform: translateY(73%);
+        transform: translateY(65%);
         width: 50px;
         font-weight: 600;
     }
-}
+
 
 .menuMyfood--button {
     @include button
 }
-
+/****** MENU NOTE ******/
 .menuNote {
     height: 1215px;
     display: flex;
@@ -173,6 +251,34 @@ img {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        .far {
+            font-size: 25px ;
+            z-index: 0;
+        }    
+                & .fas {
+                    position: absolute;
+                    left: 82.4%;
+                    top: 30px;
+                    font-size: 25px;
+                    z-index: 1;
+                    color: transparent;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    background-image: linear-gradient(#9356DC,#FF79DA);
+                    opacity: 0;
+                    width: 35px;
+                }      
+                    &:hover {
+                        .far {
+                            transition-duration: 3s;
+                            opacity: 0;
+                        }
+                        .fas {
+                            transition-duration: 3s;
+                            opacity: 1;
+                        }
+                    } 
     }
 
     h2 {
@@ -180,16 +286,11 @@ img {
         font-weight: 400;
         font-size: 27px;
     }
-
-    .far {
-        font-size: 25px ;
-    }
+}
+    
 
     .menuMyfood--button {
         @include button;
         margin-top: 25px;
     }
-}
-
-
 
