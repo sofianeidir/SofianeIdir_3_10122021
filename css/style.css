@@ -359,17 +359,17 @@ img {
   transform: scale(107%, 100%);
 }
 
-.menuMyfood {
+.menuMyfood, .menuMyfood-Delice {
   display: flex;
   flex-direction: column;
   background-color: rgba(233, 233, 233, 0.993);
   width: 100%;
-  height: 1130px;
+  height: 1145px;
   border-radius: 30px 30px 0 0;
   position: relative;
   bottom: 55px;
 }
-.menuMyfood .menuMyfood--title {
+.menuMyfood .menuMyfood--title, .menuMyfood-Delice .menuMyfood--title {
   margin-top: 5px;
   margin-left: 15px;
   width: 85%;
@@ -377,16 +377,16 @@ img {
   align-items: center;
   justify-content: space-between;
 }
-.menuMyfood .menuMyfood--title h2 {
+.menuMyfood .menuMyfood--title h2, .menuMyfood-Delice .menuMyfood--title h2 {
   font-family: "Shrikhand", cursive;
   font-weight: 400;
   font-size: 27px;
 }
-.menuMyfood .menuMyfood--title .far {
+.menuMyfood .menuMyfood--title .far, .menuMyfood-Delice .menuMyfood--title .far {
   font-size: 24px;
   z-index: 0;
 }
-.menuMyfood .menuMyfood--title .fas {
+.menuMyfood .menuMyfood--title .fas, .menuMyfood-Delice .menuMyfood--title .fas {
   position: absolute;
   left: 82.4%;
   top: 30px;
@@ -399,13 +399,17 @@ img {
   opacity: 0;
   width: 35px;
 }
-.menuMyfood .menuMyfood--title:hover .far {
+.menuMyfood .menuMyfood--title:hover .far, .menuMyfood-Delice .menuMyfood--title:hover .far {
   transition-duration: 3s;
   opacity: 0;
 }
-.menuMyfood .menuMyfood--title:hover .fas {
+.menuMyfood .menuMyfood--title:hover .fas, .menuMyfood-Delice .menuMyfood--title:hover .fas {
   transition-duration: 3s;
   opacity: 1;
+}
+
+.menuMyfood-Delice {
+  height: 1165px;
 }
 
 .menuMyfood_list {
@@ -545,6 +549,7 @@ img {
   font-size: 17px;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+  margin-top: 15px;
 }
 .menuMyfood--button:hover {
   box-shadow: 0 5px 20px rgba(48, 48, 48, 0.993);
@@ -616,7 +621,7 @@ img {
   font-size: 17px;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-  margin-top: 25px;
+  margin-top: 30px;
 }
 .menuMyfood--button:hover {
   box-shadow: 0 5px 20px rgba(48, 48, 48, 0.993);
@@ -887,29 +892,33 @@ img {
     height: 250px;
   }
 
-  .menuMyfood {
+  .menuMyfood, .menuMyfood-Delice {
     height: 1370px;
   }
-  .menuMyfood .menuMyfood--title {
+  .menuMyfood .menuMyfood--title, .menuMyfood-Delice .menuMyfood--title {
     text-align: center;
     justify-content: center;
     width: 96.5%;
   }
-  .menuMyfood .menuMyfood--title h2 {
+  .menuMyfood .menuMyfood--title h2, .menuMyfood-Delice .menuMyfood--title h2 {
     font-size: 30px;
   }
-  .menuMyfood .menuMyfood--title .far {
+  .menuMyfood .menuMyfood--title .far, .menuMyfood-Delice .menuMyfood--title .far {
     font-size: 25px;
     position: relative;
     left: 20px;
     z-index: 0;
   }
-  .menuMyfood .menuMyfood--title .fas {
+  .menuMyfood .menuMyfood--title .fas, .menuMyfood-Delice .menuMyfood--title .fas {
     position: relative;
     left: -10px;
     top: 0px;
     font-size: 26px;
     z-index: 1;
+  }
+
+  .menuMyfood-Delice {
+    height: 1385px;
   }
 
   .menuMyfood_list {
@@ -1020,6 +1029,7 @@ img {
     align-items: center;
     justify-content: center;
     width: 96.5%;
+    cursor: pointer;
   }
   .menuMyfood .menuMyfood--title h2 {
     font-size: 40px;

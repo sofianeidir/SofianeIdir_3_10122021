@@ -29,12 +29,12 @@ img {
     transform: scale(107%,100%);
 }
 
-.menuMyfood {
+.menuMyfood, .menuMyfood-Delice {
     display: flex;
     flex-direction: column;
     background-color: rgba(233, 233, 233, 0.993);
     width: 100%;
-    height: 1130px;
+    height: 1145px;
     border-radius: 30px 30px 0 0; 
     position: relative;
     bottom: 55px;
@@ -84,6 +84,9 @@ img {
     }
 
     
+}
+.menuMyfood-Delice{
+    height: 1165px;
 }
 
 
@@ -230,7 +233,8 @@ img {
 
 
 .menuMyfood--button {
-    @include button
+    @include button;
+    margin-top:15px;
 }
 /****** MENU NOTE ******/
 .menuNote {
@@ -291,6 +295,5 @@ img {
 
     .menuMyfood--button {
         @include button;
-        margin-top: 25px;
+        margin-top: 30px;
     }
-
