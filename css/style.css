@@ -1286,8 +1286,8 @@ img {
   width: 100%;
   position: fixed;
   z-index: 1;
-  animation: loaderSpinner 3s linear;
-  opacity: 1;
+  animation: loaderSpinner 3s;
+  opacity: 0;
 }
 .loader p {
   margin-top: 45vh;
