@@ -2,14 +2,7 @@
 @import "./mixins.scss";
 
 
-@keyframes heart-button {
-    from {
-        transform: scaleY(0) 3000ms;
-    }
-    to {
-        transform: scaleY(1) 4000ms;
-    }
-}
+
 
 * {
    box-sizing: border-box;
