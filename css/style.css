@@ -1285,9 +1285,10 @@ img {
   height: 100vh;
   width: 100%;
   position: fixed;
-  z-index: 1;
   animation: loaderSpinner 3s;
   opacity: 0;
+  z-index: 1;
+  visibility: hidden;
 }
 .loader p {
   margin-top: 45vh;
@@ -1334,6 +1335,7 @@ img {
 @keyframes loaderSpinner {
   0% {
     opacity: 0;
+    visibility: visible;
   }
   10% {
     opacity: 0.5;
