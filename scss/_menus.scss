@@ -27,6 +27,7 @@ img {
     height: 250px;
     width: 96.7%;
     transform: scale(107%,100%);
+
 }
 
 .menuMyfood, .menuMyfood-Delice {
@@ -34,7 +35,7 @@ img {
     flex-direction: column;
     background-color: rgba(233, 233, 233, 0.993);
     width: 100%;
-    height: 1145px;
+    height: 1135px;
     border-radius: 30px 30px 0 0; 
     position: relative;
     bottom: 55px;
@@ -70,25 +71,20 @@ img {
             background-image: linear-gradient(#9356DC,#FF79DA);
             opacity: 0;
             width: 35px;
-        }      
-            &:hover {
-                .far {
-                    transition-duration: 3s;
-                    opacity: 0;
-                }
-                .fas {
-                    transition-duration: 3s;
-                    opacity: 1;
-                }
-            } 
+            cursor: pointer;
+        }   
+        &:hover {
+            .far {
+                transition-duration: 3s;
+                opacity: 0;
+            }
+            .fas {
+                transition-duration: 3s;
+                opacity: 1;
+            }
+        }    
     }
-
-    
 }
-.menuMyfood-Delice{
-    height: 1165px;
-}
-
 
 .menuMyfood_list{ 
     margin-left: 15px;
@@ -165,14 +161,17 @@ img {
         & p {
             font-size: 14px;
             font-weight: 100;
-            max-width: 245px;
             height: 25px;
             padding-top: 15px; 
             margin-right: 10px;
             margin-top: 0;
         }  
     }
-
+    /**** AGENCEMENT POUR MENU PALETTE ****/
+    .menuMyfood_list--palettePlat {
+        & p { max-width: 245px; }
+    }
+    /**** AGENCEMENT POUR MENU DELICE ****/
     .menuMyfood_list--blocDelice {
         height: 90px;
         border-radius: 15px;
@@ -196,18 +195,14 @@ img {
                     transition: transform .5s;
                 }
             } 
-
         }  
     } 
-        
-
         .menuMyfood_list--titleDelice {
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
             flex-grow: 1;
 
-           
             h4 {
                 font-size: 17px;
                 font-weight: 500;
@@ -216,6 +211,7 @@ img {
                 margin-bottom: 0px; 
                 margin-top: 2px;
             }
+
             & p {
                 font-size: 14px;
                 font-weight: 100;
@@ -224,21 +220,32 @@ img {
                 padding-top: 3px;
             }
     }
-}
+} /**** FIN AGENCEMENT MENU DELICE ****/
     .prix {
-        transform: translateY(65%);
+        transform: translateY(69%);
         width: 50px;
         font-weight: 600;
     }
 
+    .prix-Note {
+        transform: translateY(69%);
+        width: 50px;
+        font-weight: 600;
+        margin-left: 35px
+    }
 
 .menuMyfood--button {
     @include button;
-    margin-top:15px;
+    margin-top: 25px;
 }
 /****** MENU NOTE ******/
+.Menu_Note--img {
+    & img {
+        object-position: 0 -85px;
+    }
+}
 .menuNote {
-    height: 1215px;
+    height: 1255px;
     display: flex;
     flex-direction: column;
     background-color: rgba(233, 233, 233, 0.993);
@@ -282,18 +289,21 @@ img {
                             transition-duration: 3s;
                             opacity: 1;
                         }
-                    } 
+                    }         
     }
-
-    h2 {
+  
+        h2 {
         font-family: 'Shrikhand', cursive;
         font-weight: 400;
         font-size: 27px;
+      }
     }
-}
-    
 
-    .menuMyfood--button {
+    /**** MENU DELICE ****/
+.menuMyfood-Delice{
+    height: 1165px;
+}
+   /*** .menuMyfood--button {
         @include button;
         margin-top: 30px;
-    }
+    }**/
