@@ -1,9 +1,6 @@
 @import "./variables.scss";
 @import "./mixins.scss";
 
-
-
-
 * {
    box-sizing: border-box;
    -moz-box-sizing: border-box;
@@ -58,7 +55,6 @@ header {
 
         .header_form--input{
             border: none;
-            outline: none;
             background: transparent;
         }
 
@@ -74,34 +70,33 @@ header {
         }
 }
 
-    .reservation_text {
-        
-        height: 190px;
+.reservation_text {
+    height: 190px;
     
-        & h2 { 
-            font-size: 23px;
-            font-weight: 500;
-            max-width: 270px;
-            margin: 35px auto;
-            margin-bottom: 0;
-            }
-        & p {
-        
-            font-size: 17px ;
-            font-weight: 100;
-            padding-bottom: 10px;
-            padding-left: 25px;
-            margin-top: 10px;
-            color: rgba(78, 78, 78, 0.911);
-        }   
+    & h2 { 
+        font-size: 23px;
+        font-weight: 500;
+        max-width: 270px;
+        margin: 35px auto;
+        margin-bottom: 0;
+    }
 
-        & .reservation_text--button {
-            @include button;
-            width: 205px;
-            font-size: 14px;
-            margin-left: 95px;
-            margin-top: 23px;
-        }
+    & p {
+        font-size: 17px ;
+        font-weight: 100;
+        padding-bottom: 10px;
+        padding-left: 25px;
+        margin-top: 10px;
+        color: rgba(78, 78, 78, 0.911);
+    }   
+
+    & .reservation_text--button {
+        @include button;
+        width: 205px;
+        font-size: 14px;
+        margin-left: 95px;
+        margin-top: 23px;
+    }
 }
 
 /**PARTIE FONCTIONNEMENT**/
@@ -116,50 +111,50 @@ header {
         margin: 0;
         font-size: $title-size;
         }
-    }
+}
 
-    .functioning_block {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        height: 300px;
-        margin-left: 30px;
-        margin-bottom: 45px
-    }
+.functioning_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 300px;
+    margin-left: 30px;
+    margin-bottom: 45px
+}
     
-    .functioning_block--element {
-        @include tabs;
-        position: relative;
-        -webkit-tap-highlight-color: transparent;
+.functioning_block--element {
+    @include tabs;
+    position: relative;
         
-        &:hover {
-            background: rgba(228, 215, 250, 0.527);
-            & .fas {
-                color: $primary-color;
-            }
-        }
-        
-        & .numbers {
-            @include cercle; 
-        }
+    &:hover {
+        background: rgba(228, 215, 250, 0.527);
 
         & .fas {
-            font-size: 19px;
-            position: relative;
-            top: 3px;
-            left: 9px;
-            color: rgba(68, 68, 68, 0.733);
+            color: $primary-color;
         }
-
-        & .functioning_block--text {
-           position: absolute;
-           left: 77px;
-           top: 13px;
-           font-size: 17px;
-           font-weight: 500;
-        }
-
     }
+        
+    & .numbers {
+        @include cercle; 
+    }
+
+    & .fas {
+        font-size: 19px;
+        position: relative;
+        top: 3px;
+        left: 9px;
+        color: rgba(68, 68, 68, 0.733);
+}
+
+    & .functioning_block--text {
+        position: absolute;
+        left: 77px;
+        top: 13px;
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+}
 
 /**PARTIE RESTAURANTS**/
 .restaurant {
@@ -171,17 +166,17 @@ header {
         font-size: $title-size;
         padding: 55px 0 10px 20px ;
         margin: 0;
-        }
     }
+}
 
-    .container_articles{
-        display: flex;
-        flex-direction: column;
-       align-items: center;
-       justify-content: space-around;
-       height: 990px;
-       
-    }
+.container_articles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 990px;
+
+
 /**CARTES**/
     article {
         width: 90%;
@@ -193,25 +188,24 @@ header {
         position: relative;
 
         .picture_Myfood img {
-                object-fit: cover;
-                object-position: 0 -60px ;
-                width: 100%;  
-                height: 170px;
+            object-fit: cover;
+            object-position: 0 -60px ;
+            width: 100%;  
+            height: 170px;
         }
 
-            .picture_Note img{ 
-                object-fit: cover;
-                object-position: 0 -156px ;
-                height: 170px;
-                width: 100%;  
-            }
+        .picture_Note img{ 
+            object-fit: cover;
+            object-position: 0 -156px ;
+            height: 170px;
+            width: 100%;  
+        }
 
-            .infos {
-                height: 20px;
-                margin: 5px 0 0 10px;
-                line-height: 19px;
-                width: 100%;
-            }
+        .infos {
+            height: 20px;
+            margin: 5px 0 0 10px;
+            line-height: 19px;
+            width: 100%;
 
             & h4 {
                 margin: 0;
@@ -225,72 +219,41 @@ header {
                 font-weight: 100;
                 color: rgb(56, 56, 56);
             }
-       
-            & .far{
-                position: absolute;
-                left: 87%;
-                bottom: 23px;
-                color: black;
-                font-size: 22px;
-                z-index: 0;
-
-            }  
-            & .fas {
-                position: absolute;
-                left: 87%;
-                bottom: 23px;
-                font-size: 22px;
-                z-index: 1;
-                color: transparent;
-                background-clip: text;
-                -webkit-background-clip: text;
-                background-image: linear-gradient(#9356DC,#FF79DA);
-                opacity: 0;
-                width: 25px;
-            }
-            .icones {
-               
-                &:hover {
-                    .far {
-                        transition-duration: 3s;
-                        opacity: 0;
-                    }
-                    .fas {
-                        transition-duration: 3s;
-                        opacity: 1;
-                    }
-                }
-
-            }
-              
-
-}
-/**ETIQUETTE NOUVEAU**/
-
-.container_articles--relative {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    position: relative;
-        
-    & p {
-        border-radius: 2px;
-        text-align: center;
-        line-height: 22px;
-        border: 2px solid transparent;
-        background-color: $tertiary-color;
-        color: rgba(-0, 135, 102, 1);
-        height: 26px;
-        width: 75px;
-        font-weight: 400;
-        position: absolute;
-        bottom: 164px;
-        right: 10px;
+        }
+        /***ETIQUETTE NOUVEAU***/
+        .container_articles--relative {
+           @include newlabel;
         }
 
+        & .far {
+            position: absolute;
+            left: 87%;
+            bottom: 23px;
+            color: black;
+            font-size: 22px;
+            z-index: 0;
+        }  
+
+        & .fas {
+            @include heart;
+        }
+
+        .icones {
+            &:hover {
+                .far {
+                    transition-duration: 3s;
+                    opacity: 0;
+                }
+                .fas {
+                    transition-duration: 3s;
+                    opacity: 1;
+                }
+            }
+        }
+    }          
 }
 
-/**FOOTER**/
+/***FOOTER***/
 footer {
     background-color: rgb(51, 51, 51);
     color: #FFF;
@@ -319,7 +282,6 @@ footer {
         padding-right: 10px;
         font-size: 13px;
     }
-
 }
 
 

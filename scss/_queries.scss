@@ -1,7 +1,7 @@
 
 /*** VERSION TABLETTE INDEX.HTML ***/
 @media screen and ( min-width: 640px) {
-    /**HEADER**/
+    /***HEADER***/
     header {
         height: 90px;
 
@@ -11,32 +11,31 @@
     }
 
     form{
-    
         .header_form {
             margin-left: 10px;
-            }
+        }
 
         & ::placeholder {
-            font-size: 21px;
+            font-size: 19px;
         }
 
         & .fas { 
             font-size: 21px;
         }
     }
-   /**RECHERCHES**/
+   /***RECHERCHES***/
     .reservation_text {
-    
         & h2 { 
             font-size: 30px;
             max-width: none;
-            }
+        }
+
         & p {
-        
             font-size: 23px ;
             font-weight: 100;
             color: rgba(78, 78, 78, 0.911);
         }  
+
         & .reservation_text--button {
             height: 65px;
             width: 300px;
@@ -45,46 +44,41 @@
         }
     }  
 
-    form {
-        & ::placeholder {
-            font-size: 19px;
-        }
-    }
-    /**PARTIE FONCTIONNEMENT**/
+    /***PARTIE FONCTIONNEMENT***/
     .functioning {
         height: 500px;
 
         & h3 {
             font-size: 33px;
+        }
+
+        .functioning_block {
+            align-items: center;
+            height: 400px;
+            width: 500px;
+            margin: auto;
+        }
+
+        .functioning_block--element {
+            width: 550px;
+            height: 90px;
+            margin-bottom: 25px;
+
+            & .fas {
+                font-size: 25px;
+                top: 4px;
+                left: 20px;
             }
-            .functioning_block {
-                align-items: center;
-                height: 400px;
-                width: 500px;
-                margin: auto;
+
+            & .functioning_block--text {
+                left: 115px;
+                top: 5px;
+                font-size: 29px;
+                font-weight: 500;
             }
-
-            .functioning_block--element {
-                width: 550px;
-                height: 90px;
-                margin-bottom: 25px;
-
-                & .fas {
-                    font-size: 25px;
-                    top: 4px;
-                    left: 20px;
-                }
-
-                & .functioning_block--text {
-                    left: 115px;
-                    top: 5px;
-                    font-size: 29px;
-                    font-weight: 500;
-                }
-
-            }
+        }
     }
-    /**PARTIE RESTAURANTS**/
+    /***PARTIE RESTAURANTS***/
     .restaurant {
         width: 100%;
         height: 1750px;
@@ -103,23 +97,22 @@
             .picture_Myfood {
                 height: 78%;
                 img {
-                    object-position: 0 -110px ;
+                    object-position: 0 -110px;
                     height: 100%; 
                 }
             }
             
-                .picture_Note {
-                    height: 78%;
-                    img {
-                        object-position: 0 -336px ;
-                        height: 100%;
-                    }
-                }   
-        
-                .infos {
-                    line-height: 30px;
-                    height: 60px;
+            .picture_Note {
+                height: 78%;
+                img {
+                    object-position: 0 -336px ;
+                    height: 100%;
                 }
+            }   
+        
+            .infos {
+                line-height: 30px;
+                height: 60px;
     
                 & h4 {
                     margin-top: 10px;
@@ -129,38 +122,36 @@
                 & p {
                     font-size: 19px;
                 }
+            }
+
+            .container_articles--relative {
+                & p {
+                    line-height: 32px;
+                    height: 36px;
+                    width: 90px;
+                    bottom: 290px;
+                    right: 20px;
+                    font-size: 17px;
+                }
+            }
            
-                & .far {
-                    left: 90%;
-                    bottom: 25px;
-                    font-size: 25px;
-                }   
-                & .fas {
-                    left: 90%;
-                    bottom: 25px;
-                    font-size: 25px;
-                }
+            .far {
+                left: 90%;
+                bottom: 25px;
+                font-size: 25px;
+            }
+
+            .fas {
+                left: 90%;
+                bottom: 25px;
+                font-size: 25px;
+            }
         } 
-        .container_articles--relative {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            position: relative;
-                
-            & p {
-                line-height: 32px;
-                height: 36px;
-                width: 90px;
-                bottom: 300px;
-                right: 20px;
-                }
-        }
     }
 
     footer {
             
         h5 {
-
             font-size: 25px;
         }
     
@@ -175,7 +166,7 @@
     }
 }
 
-/** VERSION DESKTOP INDEX.HTML**/
+/*** VERSION DESKTOP INDEX.HTML ***/
 @media screen and (min-width: 1050px) {
 
     form{
@@ -184,7 +175,6 @@
             margin-left: 10px;
         }
     }      
-    
     
     .functioning {
 
@@ -202,28 +192,27 @@
             }
         }    
     }
-    /**PARTIE RESTAURANTS**/
+    /***PARTIE RESTAURANTS***/
     .restaurant {
         width: 100%;
         height: 950px;
         background-color: #99999917;
         text-align: center;
-        
     
         h3 {
             font-size: 33px;
         }
+
         .container_articles{
             margin: 0 15px 0 15px;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-           height: 800px;
-        }
-
-        article {
-            width: 46%;
-            height: 355px;
+            height: 800px;
+        
+            article {
+                width: 46%;
+                height: 355px;
 
                 .picture_Myfood {
                     height: 280px;
@@ -238,51 +227,50 @@
                     height: 280px;
 
                     img { 
-                    object-position: 0 -200px;
-                    width: 100%;  
-                    }
-                    
+                        object-position: 0 -200px;
+                        width: 100%;  
+                    }    
                 }
     
                 .infos {
                     height: 60px;
                     line-height: 30px;
                     margin-left: 0;
-                }
     
-                & h4 {
-                    font-size: 21px;
-                }
+                    & h4 {
+                        font-size: 21px;
+                    }
     
-                & p {
-                    font-size: 19px;
+                    & p {
+                        font-size: 19px;
+                    }
+                }
+
+                .container_articles--relative {
+                    @include newlabel;
+                        
+                    & p {
+                        line-height: 30px;
+                        height: 34px;
+                        width: 90px;
+                        bottom: 290px;
+                        right: 20px;
+                        font-size: 17px;
+                    }
                 }
            
-                & .far {
+                .far {
                     left: 91%;
                     bottom: 23px;
                     font-size: 25px;
                 }   
-                & .fas {
-                    cursor: pointer;
+
+                .fas {
                     left: 91%;
                     bottom: 23px;
                     font-size: 25px;                  
                 }
-        } 
-        .container_articles--relative {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            position: relative;
-                
-            & p {
-                height: 35px;
-                width: 90px;
-                bottom: 290px;
-                right: 20px;
-                }
-        
+            }       
         }
     }
 
@@ -317,7 +305,6 @@
         height: 1370px;
 
         .menuMyfood--title {
-           
             text-align: center;
             justify-content: center;
             width: 96.5%;
@@ -332,7 +319,8 @@
                 left: 20px;
                 z-index: 0;
             }
-             .fas {
+            
+            .fas {
                 position: relative;
                 left: -10px;
                 top: 0px;
@@ -480,7 +468,7 @@
             .far {
                 font-size: 25px ;
                 position: relative;
-                left: 20px
+                left: 20px;
             }
         }
         .menuMyfood_list{ 

@@ -16,8 +16,7 @@
     width: 330px;
     height: 70px;
     box-shadow: 0 5px 7px rgba(0, 0, 0, 0.137);
-    cursor: pointer;
-    
+    cursor: pointer; 
 }
 
 
@@ -56,5 +55,74 @@
         box-shadow: 0 5px 20px rgba(48, 48, 48, 0.993);
         background: linear-gradient(#ff79d9cc, #9256dccb)
     }
+}
+
+@mixin heart {
+    position: absolute;
+    left: 87%;
+    bottom: 23px;
+    font-size: 22px;
+    z-index: 1;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(#9356DC,#FF79DA);
+    opacity: 0;
+    width: 25px;
+    cursor: pointer;
+}
+
+@mixin newlabel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+
+    & p {
+        border-radius: 2px;
+        text-align: center;
+        line-height: 24px;
+        border: 2px solid transparent;
+        background-color: $tertiary-color;
+        color: rgba(-0, 135, 102, 1);
+        height: 28px;
+        width: 75px;
+        font-weight: 500;
+        font-size: 13px;
+        position: absolute;
+        bottom: 150px;
+        right: 10px;
+    }
+}
+
+@mixin animationMenu {
+    .menuMyfood_list--animation {
+        display: flex;
+        justify-content: center;
+        width: 0px;
+        transition: all 1s;
+        background-color: $tertiary-color;
+        border-radius: 0 15px 15px 0;
+
+        & .fas {
+            color: #FFF;
+            font-size: 23px;
+            transform: rotate(0deg);
+            margin: auto;
+        }
+    }
+}
+
+@mixin animationhover {
+    .menuMyfood_list--animation {
+        transform-origin: right;
+        visibility: visible;
+        width: 70px;
+        
+        & .fas {
+            transform:rotate(360deg) ;
+            transition: transform .5s;
+        }
+    } 
 }
 

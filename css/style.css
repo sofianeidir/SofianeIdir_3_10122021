@@ -55,7 +55,6 @@ form .header_form {
 }
 form .header_form--input {
   border: none;
-  outline: none;
   background: transparent;
 }
 form ::placeholder {
@@ -143,7 +142,6 @@ form :focus::placeholder {
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.137);
   cursor: pointer;
   position: relative;
-  -webkit-tap-highlight-color: transparent;
 }
 .functioning_block--element:hover {
   background: rgba(228, 215, 250, 0.527);
@@ -197,10 +195,9 @@ form :focus::placeholder {
   align-items: center;
   justify-content: space-around;
   height: 990px;
+  /**CARTES**/
 }
-
-/**CARTES**/
-article {
+.container_articles article {
   width: 90%;
   height: 230px;
   border-radius: 10px;
@@ -208,37 +205,59 @@ article {
   box-shadow: 0px 4px 9px rgba(163, 163, 163, 0.356);
   background-color: #FFF;
   position: relative;
+  /***ETIQUETTE NOUVEAU***/
 }
-article .picture_Myfood img {
+.container_articles article .picture_Myfood img {
   object-fit: cover;
   object-position: 0 -60px;
   width: 100%;
   height: 170px;
 }
-article .picture_Note img {
+.container_articles article .picture_Note img {
   object-fit: cover;
   object-position: 0 -156px;
   height: 170px;
   width: 100%;
 }
-article .infos {
+.container_articles article .infos {
   height: 20px;
   margin: 5px 0 0 10px;
   line-height: 19px;
   width: 100%;
 }
-article h4 {
+.container_articles article .infos h4 {
   margin: 0;
   font-size: 14px;
   color: black;
 }
-article p {
+.container_articles article .infos p {
   margin: 0;
   font-size: 13px;
   font-weight: 100;
   color: #383838;
 }
-article .far {
+.container_articles article .container_articles--relative {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+}
+.container_articles article .container_articles--relative p {
+  border-radius: 2px;
+  text-align: center;
+  line-height: 24px;
+  border: 2px solid transparent;
+  background-color: #99E2D0;
+  color: #008766;
+  height: 28px;
+  width: 75px;
+  font-weight: 500;
+  font-size: 13px;
+  position: absolute;
+  bottom: 150px;
+  right: 10px;
+}
+.container_articles article .far {
   position: absolute;
   left: 87%;
   bottom: 23px;
@@ -246,7 +265,7 @@ article .far {
   font-size: 22px;
   z-index: 0;
 }
-article .fas {
+.container_articles article .fas {
   position: absolute;
   left: 87%;
   bottom: 23px;
@@ -258,39 +277,18 @@ article .fas {
   background-image: linear-gradient(#9356DC, #FF79DA);
   opacity: 0;
   width: 25px;
+  cursor: pointer;
 }
-article .icones:hover .far {
+.container_articles article .icones:hover .far {
   transition-duration: 3s;
   opacity: 0;
 }
-article .icones:hover .fas {
+.container_articles article .icones:hover .fas {
   transition-duration: 3s;
   opacity: 1;
 }
 
-/**ETIQUETTE NOUVEAU**/
-.container_articles--relative {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  position: relative;
-}
-.container_articles--relative p {
-  border-radius: 2px;
-  text-align: center;
-  line-height: 22px;
-  border: 2px solid transparent;
-  background-color: #99E2D0;
-  color: #008766;
-  height: 26px;
-  width: 75px;
-  font-weight: 400;
-  position: absolute;
-  bottom: 164px;
-  right: 10px;
-}
-
-/**FOOTER**/
+/***FOOTER***/
 footer {
   background-color: #333333;
   color: #FFF;
@@ -381,17 +379,22 @@ img {
 }
 .menuMyfood .menuMyfood--title .fas, .menuMyfood-Delice .menuMyfood--title .fas {
   position: absolute;
-  left: 82.4%;
-  top: 30px;
-  font-size: 25px;
+  left: 87%;
+  bottom: 23px;
+  font-size: 22px;
   z-index: 1;
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
   background-image: linear-gradient(#9356DC, #FF79DA);
   opacity: 0;
-  width: 35px;
+  width: 25px;
   cursor: pointer;
+  left: 82.4%;
+  top: 30px;
+  font-size: 25px;
+  width: 35px;
+  height: 35px;
 }
 .menuMyfood .menuMyfood--title:hover .far, .menuMyfood-Delice .menuMyfood--title:hover .far {
   transition-duration: 3s;
@@ -416,6 +419,7 @@ img {
   padding-bottom: 5px;
 }
 .menuMyfood_list .menuMyfood_list--bloc {
+  /*** FAIRE UNE MIXIN ***/
   border-radius: 15px;
   height: 70px;
   width: 96%;
@@ -428,6 +432,45 @@ img {
   display: flex;
   overflow: hidden;
 }
+.menuMyfood_list .menuMyfood_list--bloc .menuMyfood_list--title {
+  flex-grow: 1;
+  width: 180px;
+}
+.menuMyfood_list .menuMyfood_list--bloc .menuMyfood_list--title p, .menuMyfood_list .menuMyfood_list--bloc .menuMyfood_list--title h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menuMyfood_list .menuMyfood_list--bloc .menuMyfood_list--title h4 {
+  font-size: 17px;
+  font-weight: 500;
+  padding-top: 20px;
+  margin-bottom: 0px;
+  margin-top: 2px;
+  height: 30px;
+}
+.menuMyfood_list .menuMyfood_list--bloc .menuMyfood_list--title p {
+  font-size: 14px;
+  font-weight: 100;
+  height: 25px;
+  padding-top: 15px;
+  margin-right: 10px;
+  margin-top: 0;
+}
+.menuMyfood_list .menuMyfood_list--bloc .menuMyfood_list--animation {
+  display: flex;
+  justify-content: center;
+  width: 0px;
+  transition: all 1s;
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+}
+.menuMyfood_list .menuMyfood_list--bloc .menuMyfood_list--animation .fas {
+  color: #FFF;
+  font-size: 23px;
+  transform: rotate(0deg);
+  margin: auto;
+}
 .menuMyfood_list .menuMyfood_list--bloc:hover .menuMyfood_list--animation {
   transform-origin: right;
   visibility: visible;
@@ -436,45 +479,6 @@ img {
 .menuMyfood_list .menuMyfood_list--bloc:hover .menuMyfood_list--animation .fas {
   transform: rotate(360deg);
   transition: transform 0.5s;
-}
-.menuMyfood_list .menuMyfood_list--animation {
-  display: flex;
-  justify-content: center;
-  width: 0px;
-  transition: all 1s;
-  background-color: #99E2D0;
-  border-radius: 0 15px 15px 0;
-}
-.menuMyfood_list .menuMyfood_list--animation .fas {
-  color: #FFF;
-  font-size: 27px;
-  transform: rotate(0deg);
-  margin: auto;
-}
-.menuMyfood_list .menuMyfood_list--title {
-  flex-grow: 1;
-  width: 180px;
-}
-.menuMyfood_list .menuMyfood_list--title p, .menuMyfood_list .menuMyfood_list--title h4 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.menuMyfood_list .menuMyfood_list--title h4 {
-  font-size: 17px;
-  font-weight: 500;
-  padding-top: 20px;
-  margin-bottom: 0px;
-  margin-top: 2px;
-  height: 30px;
-}
-.menuMyfood_list .menuMyfood_list--title p {
-  font-size: 14px;
-  font-weight: 100;
-  height: 25px;
-  padding-top: 15px;
-  margin-right: 10px;
-  margin-top: 0;
 }
 .menuMyfood_list .menuMyfood_list--palettePlat p {
   max-width: 245px;
@@ -491,6 +495,41 @@ img {
   display: flex;
   overflow: hidden;
 }
+.menuMyfood_list .menuMyfood_list--blocDelice .menuMyfood_list--animation {
+  display: flex;
+  justify-content: center;
+  width: 0px;
+  transition: all 1s;
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+}
+.menuMyfood_list .menuMyfood_list--blocDelice .menuMyfood_list--animation .fas {
+  color: #FFF;
+  font-size: 23px;
+  transform: rotate(0deg);
+  margin: auto;
+}
+.menuMyfood_list .menuMyfood_list--blocDelice .menuMyfood_list--titleDelice {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+.menuMyfood_list .menuMyfood_list--blocDelice .menuMyfood_list--titleDelice h4 {
+  font-size: 17px;
+  font-weight: 500;
+  max-width: 240px;
+  padding-top: 15px;
+  margin-bottom: 0px;
+  margin-top: 2px;
+}
+.menuMyfood_list .menuMyfood_list--blocDelice .menuMyfood_list--titleDelice p {
+  font-size: 14px;
+  font-weight: 100;
+  height: 25px;
+  margin: 0;
+  padding-top: 3px;
+}
 .menuMyfood_list .menuMyfood_list--blocDelice:hover .menuMyfood_list--animation {
   transform-origin: right;
   visibility: visible;
@@ -500,32 +539,11 @@ img {
   transform: rotate(360deg);
   transition: transform 0.5s;
 }
-.menuMyfood_list .menuMyfood_list--titleDelice {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  flex-grow: 1;
-}
-.menuMyfood_list .menuMyfood_list--titleDelice h4 {
-  font-size: 17px;
-  font-weight: 500;
-  max-width: 240px;
-  padding-top: 15px;
-  margin-bottom: 0px;
-  margin-top: 2px;
-}
-.menuMyfood_list .menuMyfood_list--titleDelice p {
-  font-size: 14px;
-  font-weight: 100;
-  height: 25px;
-  margin: 0;
-  padding-top: 3px;
-}
 
 /**** FIN AGENCEMENT MENU DELICE ****/
 .prix {
   transform: translateY(69%);
-  width: 50px;
+  width: 55px;
   font-weight: 600;
 }
 
@@ -587,15 +605,20 @@ img {
 }
 .menuNote .menuNote--title .fas {
   position: absolute;
-  left: 82.4%;
-  top: 30px;
-  font-size: 25px;
+  left: 87%;
+  bottom: 23px;
+  font-size: 22px;
   z-index: 1;
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
   background-image: linear-gradient(#9356DC, #FF79DA);
   opacity: 0;
+  width: 25px;
+  cursor: pointer;
+  left: 82.4%;
+  top: 30px;
+  font-size: 25px;
   width: 35px;
 }
 .menuNote .menuNote--title:hover .far {
@@ -623,7 +646,7 @@ img {
  }**/
 /*** VERSION TABLETTE INDEX.HTML ***/
 @media screen and (min-width: 640px) {
-  /**HEADER**/
+  /***HEADER***/
   header {
     height: 90px;
   }
@@ -635,13 +658,13 @@ img {
     margin-left: 10px;
   }
   form ::placeholder {
-    font-size: 21px;
+    font-size: 19px;
   }
   form .fas {
     font-size: 21px;
   }
 
-  /**RECHERCHES**/
+  /***RECHERCHES***/
   .reservation_text h2 {
     font-size: 30px;
     max-width: none;
@@ -658,11 +681,7 @@ img {
     margin: auto;
   }
 
-  form ::placeholder {
-    font-size: 19px;
-  }
-
-  /**PARTIE FONCTIONNEMENT**/
+  /***PARTIE FONCTIONNEMENT***/
   .functioning {
     height: 500px;
   }
@@ -692,7 +711,7 @@ img {
     font-weight: 500;
   }
 
-  /**PARTIE RESTAURANTS**/
+  /***PARTIE RESTAURANTS***/
   .restaurant {
     width: 100%;
     height: 1750px;
@@ -725,12 +744,20 @@ img {
     line-height: 30px;
     height: 60px;
   }
-  .restaurant article h4 {
+  .restaurant article .infos h4 {
     margin-top: 10px;
     font-size: 21px;
   }
-  .restaurant article p {
+  .restaurant article .infos p {
     font-size: 19px;
+  }
+  .restaurant article .container_articles--relative p {
+    line-height: 32px;
+    height: 36px;
+    width: 90px;
+    bottom: 290px;
+    right: 20px;
+    font-size: 17px;
   }
   .restaurant article .far {
     left: 90%;
@@ -741,19 +768,6 @@ img {
     left: 90%;
     bottom: 25px;
     font-size: 25px;
-  }
-  .restaurant .container_articles--relative {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    position: relative;
-  }
-  .restaurant .container_articles--relative p {
-    line-height: 32px;
-    height: 36px;
-    width: 90px;
-    bottom: 300px;
-    right: 20px;
   }
 
   footer h5 {
@@ -767,7 +781,7 @@ img {
     font-size: 19px;
   }
 }
-/** VERSION DESKTOP INDEX.HTML**/
+/*** VERSION DESKTOP INDEX.HTML ***/
 @media screen and (min-width: 1050px) {
   form .header_form {
     margin-left: 10px;
@@ -793,7 +807,7 @@ img {
     line-height: 35px;
   }
 
-  /**PARTIE RESTAURANTS**/
+  /***PARTIE RESTAURANTS***/
   .restaurant {
     width: 100%;
     height: 950px;
@@ -810,57 +824,73 @@ img {
     flex-wrap: wrap;
     height: 800px;
   }
-  .restaurant article {
+  .restaurant .container_articles article {
     width: 46%;
     height: 355px;
   }
-  .restaurant article .picture_Myfood {
+  .restaurant .container_articles article .picture_Myfood {
     height: 280px;
   }
-  .restaurant article .picture_Myfood img {
+  .restaurant .container_articles article .picture_Myfood img {
     object-position: 0 0;
     height: 100%;
   }
-  .restaurant article .picture_Note {
+  .restaurant .container_articles article .picture_Note {
     height: 280px;
   }
-  .restaurant article .picture_Note img {
+  .restaurant .container_articles article .picture_Note img {
     object-position: 0 -200px;
     width: 100%;
   }
-  .restaurant article .infos {
+  .restaurant .container_articles article .infos {
     height: 60px;
     line-height: 30px;
     margin-left: 0;
   }
-  .restaurant article h4 {
+  .restaurant .container_articles article .infos h4 {
     font-size: 21px;
   }
-  .restaurant article p {
+  .restaurant .container_articles article .infos p {
     font-size: 19px;
   }
-  .restaurant article .far {
-    left: 91%;
-    bottom: 23px;
-    font-size: 25px;
-  }
-  .restaurant article .fas {
-    cursor: pointer;
-    left: 91%;
-    bottom: 23px;
-    font-size: 25px;
-  }
-  .restaurant .container_articles--relative {
+  .restaurant .container_articles article .container_articles--relative {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     position: relative;
   }
-  .restaurant .container_articles--relative p {
-    height: 35px;
+  .restaurant .container_articles article .container_articles--relative p {
+    border-radius: 2px;
+    text-align: center;
+    line-height: 24px;
+    border: 2px solid transparent;
+    background-color: #99E2D0;
+    color: #008766;
+    height: 28px;
+    width: 75px;
+    font-weight: 500;
+    font-size: 13px;
+    position: absolute;
+    bottom: 150px;
+    right: 10px;
+  }
+  .restaurant .container_articles article .container_articles--relative p {
+    line-height: 30px;
+    height: 34px;
     width: 90px;
     bottom: 290px;
     right: 20px;
+    font-size: 17px;
+  }
+  .restaurant .container_articles article .far {
+    left: 91%;
+    bottom: 23px;
+    font-size: 25px;
+  }
+  .restaurant .container_articles article .fas {
+    left: 91%;
+    bottom: 23px;
+    font-size: 25px;
   }
 
   footer {
@@ -1192,6 +1222,7 @@ img {
   0% {
     opacity: 0.2;
   }
+  /** 90 ? **/
   100% {
     opacity: 1;
   }
@@ -1213,7 +1244,7 @@ img {
     opacity: 1;
   }
 }
-/**** LISTES ENTREE ETC ***/
+/*** LISTES ENTREE ETC ***/
 .menuMyfood_list--1 {
   animation-name: menuTeste;
   animation-duration: 1s;
@@ -1234,7 +1265,7 @@ img {
   animation-duration: 1.5s;
 }
 
-/**DIV INFORMATIONS ****/
+/*** DIV INFORMATIONS ***/
 .menuMyfood_list--bloc_1 {
   animation-name: teste1;
   animation-duration: 1.5s;
@@ -1284,11 +1315,11 @@ img {
 .loader {
   font-size: 35px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.805);
+  background: white;
   height: 100vh;
   width: 100%;
   position: fixed;
-  animation: loaderSpinner 3s;
+  animation: loaderSpinner 1.5s;
   opacity: 0;
   z-index: 1;
   visibility: hidden;
@@ -1298,7 +1329,7 @@ img {
   background-clip: text;
   color: transparent;
   -webkit-background-clip: text;
-  background-image: linear-gradient(#9356DC, #FF79DA);
+  background-image: linear-gradient(#FF79DA, #9356DC);
 }
 
 .loader-spinner {
@@ -1336,30 +1367,12 @@ img {
   }
 }
 @keyframes loaderSpinner {
-  0% {
-    opacity: 0;
+  to {
+    opacity: 1;
     visibility: visible;
   }
-  10% {
-    opacity: 0.5;
-  }
-  20% {
-    opacity: 0.8;
-  }
-  30% {
+  from {
     opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  70% {
-    opacity: 0.8;
-  }
-  90% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0;
   }
 }
 

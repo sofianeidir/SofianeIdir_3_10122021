@@ -27,12 +27,9 @@
     0% { opacity: 0;}
     20%{opacity: 0;}
     30%{opacity: 0;}
-    60% { 
-        opacity: 0;
-    }
+    60% {opacity: 0;}
     70% {opacity: 0;}
     80%{opacity: 0.2;}
-
     100% { opacity: 1;}
 }
 
@@ -40,21 +37,17 @@
     0% { opacity: 0;}
     20%{opacity: 0;}
     30%{opacity: 0;}
-    60% { 
-        opacity: 0;
-    }
+    60% {opacity: 0;}
     70% {opacity: 0;}
     80%{opacity: 0;}
-    0%{opacity: 0.2;}
+    0%{opacity: 0.2;} /** 90 ? **/
 
     100% { opacity: 1;}
 }
 
 
 @keyframes menuTeste{
-from {
-        opacity: 0;
-    }
+from {opacity: 0;}
     70%{opacity: 0;}
     80%{opacity: 0.3;}
     90%{opacity: 0.5;
@@ -65,7 +58,7 @@ from {
  }
 }
 
- /**** LISTES ENTREE ETC ***/
+ /*** LISTES ENTREE ETC ***/
 
    .menuMyfood_list--1{
     animation-name: menuTeste ;
@@ -88,7 +81,7 @@ from {
             animation-duration: 1.5s;
     }    
         
-  /**DIV INFORMATIONS ****/
+  /*** DIV INFORMATIONS ***/
    .menuMyfood_list--bloc_1 {
         animation-name: teste1;
         animation-duration: 1.5s;
@@ -140,21 +133,21 @@ from {
 .loader {
     font-size: 35px;
     text-align: center;
-    background: rgba(255, 255, 255, 0.805) ;
+    background: rgb(255, 255, 255) ;
     height: 100vh;
     width: 100%;
     position: fixed;
-    animation: loaderSpinner 3s ;
+    animation: loaderSpinner 1.5s ;
     opacity: 0;
     z-index: 1;
     visibility: hidden;
-   & p{
+    & p{
         margin-top: 45vh;
         background-clip: text;
         color: transparent;
         -webkit-background-clip: text;
-        background-image: linear-gradient(#9356DC,#FF79DA);
-   }  
+        background-image: $gradient-color;
+    }  
 }
 
 
@@ -163,10 +156,9 @@ from {
     height: 40px;
     display: inline-block;
     border-radius: 50%;
-    border: 3px solid #9356DC;
+    border: 3px solid $primary-color;
     position: relative;
-    top: 45vh;
-    
+    top: 45vh; 
 }
 
 .loader-spinner:after {
@@ -178,7 +170,7 @@ from {
     right: -3px;
     border: 3px solid transparent;
     border-radius: 50%;
-    border-top-color: #FF79DA;
+    border-top-color: $secondary-color;
     animation: rotate 3s linear infinite;
  
    
@@ -191,12 +183,6 @@ from {
 }
 
 @keyframes loaderSpinner {
-    0% {opacity: 0; visibility: visible;}
-    10% {opacity: 0.5;}
-    20% {opacity: 0.8;}
-    30%{opacity: 1;;}
-    50% {opacity: 1;}
-    70% {opacity: 0.8;}
-    90% {opacity: 0.5;}
-    100% {opacity: 0;}
+    to {opacity: 1; visibility: visible;}
+    from {opacity: 1;}
 }
