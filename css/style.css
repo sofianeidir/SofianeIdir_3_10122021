@@ -99,7 +99,6 @@ form :focus::placeholder {
   margin-top: 20px;
   font-size: 17px;
   cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
   width: 205px;
   font-size: 14px;
   margin-left: 95px;
@@ -263,14 +262,14 @@ form :focus::placeholder {
   bottom: 23px;
   color: black;
   font-size: 22px;
-  z-index: 0;
+  /** z-index: 0;**/
 }
 .container_articles article .fas {
   position: absolute;
   left: 87%;
   bottom: 23px;
   font-size: 22px;
-  z-index: 1;
+  /** z-index: 1; **/
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -345,9 +344,8 @@ header h1 {
 
 img {
   object-fit: cover;
-  height: 250px;
-  width: 96.7%;
-  transform: scale(107%, 100%);
+  height: 270px;
+  width: 100%;
 }
 
 .menuMyfood, .menuMyfood-Delice {
@@ -382,7 +380,7 @@ img {
   left: 87%;
   bottom: 23px;
   font-size: 22px;
-  z-index: 1;
+  /** z-index: 1; **/
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -390,9 +388,9 @@ img {
   opacity: 0;
   width: 25px;
   cursor: pointer;
-  left: 82.4%;
-  top: 30px;
-  font-size: 25px;
+  left: 82.6%;
+  top: 31px;
+  font-size: 24px;
   width: 35px;
   height: 35px;
 }
@@ -408,8 +406,8 @@ img {
 .menuMyfood_list {
   margin-left: 15px;
   margin-bottom: 10px;
-  /**** AGENCEMENT POUR MENU PALETTE ****/
-  /**** AGENCEMENT POUR MENU DELICE ****/
+  /*** AGENCEMENT POUR MENU PALETTE ***/
+  /*** AGENCEMENT POUR MENU DELICE ***/
 }
 .menuMyfood_list h3 {
   font-size: 16px;
@@ -419,7 +417,6 @@ img {
   padding-bottom: 5px;
 }
 .menuMyfood_list .menuMyfood_list--bloc {
-  /*** FAIRE UNE MIXIN ***/
   border-radius: 15px;
   height: 70px;
   width: 96%;
@@ -461,7 +458,7 @@ img {
   display: flex;
   justify-content: center;
   width: 0px;
-  transition: all 1s;
+  transition: 1s;
   background-color: #99E2D0;
   border-radius: 0 15px 15px 0;
 }
@@ -472,9 +469,9 @@ img {
   margin: auto;
 }
 .menuMyfood_list .menuMyfood_list--bloc:hover .menuMyfood_list--animation {
-  transform-origin: right;
-  visibility: visible;
-  width: 70px;
+  /**transform-origin: right;**/
+  /**visibility: visible;**/
+  width: 65px;
 }
 .menuMyfood_list .menuMyfood_list--bloc:hover .menuMyfood_list--animation .fas {
   transform: rotate(360deg);
@@ -484,22 +481,25 @@ img {
   max-width: 245px;
 }
 .menuMyfood_list .menuMyfood_list--blocDelice {
-  height: 90px;
   border-radius: 15px;
+  height: 70px;
   width: 96%;
   background-color: #FFF;
+  line-height: 0px;
   padding-left: 10px;
   margin-bottom: 15px;
   box-shadow: 0 5px 10px rgba(158, 158, 158, 0.267);
   cursor: pointer;
   display: flex;
   overflow: hidden;
+  height: 88px;
+  line-height: 20px;
 }
 .menuMyfood_list .menuMyfood_list--blocDelice .menuMyfood_list--animation {
   display: flex;
   justify-content: center;
   width: 0px;
-  transition: all 1s;
+  transition: 1s;
   background-color: #99E2D0;
   border-radius: 0 15px 15px 0;
 }
@@ -519,7 +519,7 @@ img {
   font-size: 17px;
   font-weight: 500;
   max-width: 240px;
-  padding-top: 15px;
+  padding-top: 10px;
   margin-bottom: 0px;
   margin-top: 2px;
 }
@@ -531,27 +531,48 @@ img {
   padding-top: 3px;
 }
 .menuMyfood_list .menuMyfood_list--blocDelice:hover .menuMyfood_list--animation {
-  transform-origin: right;
-  visibility: visible;
-  width: 70px;
+  /**transform-origin: right;**/
+  /**visibility: visible;**/
+  width: 65px;
 }
 .menuMyfood_list .menuMyfood_list--blocDelice:hover .menuMyfood_list--animation .fas {
   transform: rotate(360deg);
   transition: transform 0.5s;
 }
 
-/**** FIN AGENCEMENT MENU DELICE ****/
+/*** MENU DELICE ***/
+.menuMyfood-Delice {
+  height: 1155px;
+}
+
+/*** FIN AGENCEMENT MENU DELICE ***/
+.menuMyfood-Francaise {
+  height: 1150px;
+}
+
 .prix {
   transform: translateY(69%);
-  width: 55px;
-  font-weight: 600;
+  width: 50px;
+  font-weight: 500;
+  margin-left: 13px;
 }
 
 .prix-Note {
   transform: translateY(69%);
   width: 50px;
-  font-weight: 600;
-  margin-left: 35px;
+  font-weight: 500;
+  margin-left: 13px;
+  width: 50px;
+  margin-left: 37px;
+}
+
+.prix-Note_bis {
+  transform: translateY(69%);
+  width: 50px;
+  font-weight: 500;
+  margin-left: 13px;
+  width: 50px;
+  margin-left: 10px;
 }
 
 .menuMyfood--button {
@@ -568,7 +589,6 @@ img {
   margin-top: 20px;
   font-size: 17px;
   cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
   margin-top: 25px;
 }
 .menuMyfood--button:hover {
@@ -576,19 +596,24 @@ img {
   background: linear-gradient(#ff79d9cc, #9256dccb);
 }
 
-/****** MENU NOTE ******/
+/*** MENU NOTE ***/
+.Menu_Note--img {
+  height: 250px;
+}
 .Menu_Note--img img {
-  object-position: 0 -85px;
+  object-position: 0 -95px;
 }
 
 .menuNote {
-  height: 1255px;
   display: flex;
   flex-direction: column;
   background-color: rgba(233, 233, 233, 0.993);
   width: 100%;
+  height: 1135px;
   border-radius: 30px 30px 0 0;
   position: relative;
+  bottom: 55px;
+  height: 1255px;
   bottom: 30px;
 }
 .menuNote .menuNote--title {
@@ -599,16 +624,22 @@ img {
   align-items: center;
   justify-content: space-between;
 }
+.menuNote .menuNote--title h2 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+  font-size: 27px;
+}
 .menuNote .menuNote--title .far {
   font-size: 25px;
   z-index: 0;
+  line-height: 0;
 }
 .menuNote .menuNote--title .fas {
   position: absolute;
   left: 87%;
   bottom: 23px;
   font-size: 22px;
-  z-index: 1;
+  /** z-index: 1; **/
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -620,6 +651,7 @@ img {
   top: 30px;
   font-size: 25px;
   width: 35px;
+  height: 35px;
 }
 .menuNote .menuNote--title:hover .far {
   transition-duration: 3s;
@@ -629,24 +661,10 @@ img {
   transition-duration: 3s;
   opacity: 1;
 }
-.menuNote h2 {
-  font-family: "Shrikhand", cursive;
-  font-weight: 400;
-  font-size: 27px;
-}
 
-/**** MENU DELICE ****/
-.menuMyfood-Delice {
-  height: 1165px;
-}
-
-/*** .menuMyfood--button {
-     @include button;
-     margin-top: 30px;
- }**/
 /*** VERSION TABLETTE INDEX.HTML ***/
 @media screen and (min-width: 640px) {
-  /***HEADER***/
+  /*** HEADER ***/
   header {
     height: 90px;
   }
@@ -664,7 +682,7 @@ img {
     font-size: 21px;
   }
 
-  /***RECHERCHES***/
+  /*** RECHERCHES ***/
   .reservation_text h2 {
     font-size: 30px;
     max-width: none;
@@ -681,7 +699,7 @@ img {
     margin: auto;
   }
 
-  /***PARTIE FONCTIONNEMENT***/
+  /*** PARTIE FONCTIONNEMENT ***/
   .functioning {
     height: 500px;
   }
@@ -911,7 +929,7 @@ img {
 
   img {
     object-fit: cover;
-    width: 96.6%;
+    width: 100%;
     height: 250px;
   }
 
@@ -935,7 +953,7 @@ img {
   .menuMyfood .menuMyfood--title .fas, .menuMyfood-Delice .menuMyfood--title .fas {
     position: relative;
     left: -10px;
-    top: 0px;
+    top: 5px;
     font-size: 26px;
     z-index: 1;
   }
@@ -960,7 +978,6 @@ img {
     line-height: 0px;
     padding-left: 10px;
     margin-bottom: 25px;
-    box-shadow: 0 5px 10px rgba(158, 158, 158, 0.267);
   }
   .menuMyfood_list .menuMyfood_list--bloc h4 {
     margin-top: 10px;
@@ -976,6 +993,7 @@ img {
     font-weight: 600;
   }
 
+  /*** AGENCEMENT MENU DELICE ***/
   .menuMyfood_list .menuMyfood_list--blocDelice {
     height: 110px;
     width: 70%;
@@ -1013,7 +1031,7 @@ img {
   .menuNote .menuNote--title .fas {
     position: relative;
     left: -10px;
-    top: 0px;
+    top: 4px;
     font-size: 26px;
     z-index: 1;
   }
@@ -1037,7 +1055,7 @@ img {
   img {
     object-fit: cover;
     height: 400px;
-    width: 96.6%;
+    width: 100%;
     object-position: 0;
   }
 
@@ -1085,7 +1103,8 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 96.5%;
+    cursor: pointer;
   }
   .menuNote h2 {
     font-size: 40px;
@@ -1148,8 +1167,42 @@ img {
     object-position: 0 -350px;
   }
 }
-/***** KEYFRAMES !!!!!!!!***/
-@keyframes teste1 {
+/*** KEYFRAMES ***/
+@keyframes menu_list--animation {
+  from {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*** LISTES ENTREE ETC ***/
+.menuMyfood_list--1 {
+  animation-name: menu_list--animation;
+  animation-duration: 1s;
+}
+
+.menuMyfood_list--2 {
+  animation-name: menu_list--animation;
+  animation-duration: 2s;
+}
+
+.menuMyfood_list--3 {
+  animation-name: menu_list--animation;
+  animation-duration: 3s;
+}
+
+/*** ELEMENTS DES BLOCS ***/
+@keyframes element1 {
   0% {
     opacity: 0;
   }
@@ -1163,7 +1216,7 @@ img {
     opacity: 1;
   }
 }
-@keyframes teste2 {
+@keyframes element2 {
   0% {
     opacity: 0;
   }
@@ -1177,7 +1230,7 @@ img {
     opacity: 1;
   }
 }
-@keyframes teste3 {
+@keyframes element3 {
   0% {
     opacity: 0;
   }
@@ -1200,6 +1253,7 @@ img {
     opacity: 1;
   }
 }
+/*** AGENCEMENT MENU NOTE ***/
 @keyframes Note4 {
   0% {
     opacity: 0;
@@ -1219,95 +1273,62 @@ img {
   80% {
     opacity: 0;
   }
-  0% {
+  90% {
     opacity: 0.2;
   }
-  /** 90 ? **/
   100% {
     opacity: 1;
   }
 }
-@keyframes menuTeste {
-  from {
-    opacity: 0;
-  }
-  70% {
-    opacity: 0;
-  }
-  80% {
-    opacity: 0.3;
-  }
-  90% {
-    opacity: 0.5;
-  }
-  to {
-    opacity: 1;
-  }
-}
-/*** LISTES ENTREE ETC ***/
-.menuMyfood_list--1 {
-  animation-name: menuTeste;
-  animation-duration: 1s;
-}
-
-.menuMyfood_list--2 {
-  animation-name: menuTeste;
-  animation-duration: 2s;
-}
-
-.menuMyfood_list--3 {
-  animation-name: menuTeste;
-  animation-duration: 3s;
-}
-
 .menuMyfood_list--bloc_Note {
   animation-name: Note4;
   animation-duration: 1.5s;
 }
 
-/*** DIV INFORMATIONS ***/
+/*** FIN MENU NOTE ***/
+/*** ELEMENTS ***/
 .menuMyfood_list--bloc_1 {
-  animation-name: teste1;
+  animation-name: element1;
   animation-duration: 1.5s;
 }
 
 .menuMyfood_list--bloc_2 {
-  animation-name: teste2;
+  animation-name: element2;
   animation-duration: 1.5s;
 }
 
 .menuMyfood_list--bloc_3 {
-  animation-name: teste3;
+  animation-name: element3;
   animation-duration: 1.5s;
 }
 
 .menuMyfood_list--bloc_4 {
-  animation-name: teste1;
+  animation-name: element1;
   animation-duration: 2.5s;
 }
 
 .menuMyfood_list--bloc_5 {
-  animation-name: teste2;
+  animation-name: element2;
   animation-duration: 2.5s;
 }
 
 .menuMyfood_list--bloc_6 {
-  animation-name: teste3;
+  animation-name: element3;
   animation-duration: 2.5s;
 }
 
 .menuMyfood_list--bloc_7 {
-  animation-name: teste1;
+  animation-name: element1;
   animation-duration: 3.5s;
 }
 
 .menuMyfood_list--bloc_8 {
-  animation-name: teste2;
+  animation-name: element2;
   animation-duration: 3.5s;
 }
 
 .menuMyfood_list--bloc_9 {
-  animation-name: teste3;
+  animation-name: element3;
   animation-duration: 3.5s;
 }
 
@@ -1324,7 +1345,7 @@ img {
   z-index: 1;
   visibility: hidden;
 }
-.loader p {
+.loader h2 {
   margin-top: 45vh;
   background-clip: text;
   color: transparent;

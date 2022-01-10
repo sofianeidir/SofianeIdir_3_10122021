@@ -24,28 +24,15 @@ header {
 
 img {
     object-fit: cover;
-    height: 250px;
-    width: 96.7%;
-    transform: scale(107%,100%);
+    height: 270px;
+    width: 100%;
 }
 
 .menuMyfood, .menuMyfood-Delice {
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(233, 233, 233, 0.993);
-    width: 100%;
-    height: 1135px;
-    border-radius: 30px 30px 0 0; 
-    position: relative;
-    bottom: 55px;
+    @include menuMyfood;
 
     .menuMyfood--title {
-        margin-top: 5px;
-        margin-left: 15px;
-        width: 85%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+       @include list--title;     
 
         h2 {
             font-family: 'Shrikhand', cursive;
@@ -60,11 +47,11 @@ img {
         
         .fas {
             @include heart;
-            left: 82.4%;
-            top: 30px;
-            font-size: 25px;
-            width: 35px;   
-            height: 35px; 
+            left: 82.6%;
+            top: 31px;
+            font-size: 24px;
+            width: 35px; 
+            height: 35px;
         }   
 
         &:hover {
@@ -93,27 +80,17 @@ img {
         padding-bottom: 5px;
     }
     
-    .menuMyfood_list--bloc { /*** FAIRE UNE MIXIN ***/
-        border-radius: 15px;
-        height: 70px;
-        width: 96%;
-        background-color: #FFF;
-        line-height: 0px;
-        padding-left: 10px;
-        margin-bottom: 15px;
-        box-shadow: 0 5px 10px rgba(158, 158, 158, 0.267);
-        cursor: pointer;
-        display: flex;
-        overflow: hidden;
+    .menuMyfood_list--bloc {
+        @include list--bloc;
 
         .menuMyfood_list--title {
             flex-grow: 1;
             width: 180px;
-           p, h4{
+            p, h4 {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-           }
+            }
             
             & h4 {
                 font-size: 17px;
@@ -139,25 +116,16 @@ img {
             @include animationhover;
         }
     }
-  
-    
-    /**** AGENCEMENT POUR MENU PALETTE ****/
+/*** AGENCEMENT POUR MENU PALETTE ***/
     .menuMyfood_list--palettePlat {
         & p { max-width: 245px; }
     }
-    /**** AGENCEMENT POUR MENU DELICE ****/
-    .menuMyfood_list--blocDelice {
-        height: 90px;
-        border-radius: 15px;
-        width: 96%;
-        background-color: #FFF;
-        padding-left: 10px;
-        margin-bottom: 15px;
-        box-shadow: 0 5px 10px rgba(158, 158, 158, 0.267);
-        cursor: pointer;
-        display: flex;
-        overflow: hidden;
 
+/*** AGENCEMENT POUR MENU DELICE ***/
+    .menuMyfood_list--blocDelice {
+        @include list--bloc;
+        height: 88px;
+        line-height: 20px;
         @include animationMenu;
 
         .menuMyfood_list--titleDelice {
@@ -170,7 +138,7 @@ img {
                 font-size: 17px;
                 font-weight: 500;
                 max-width: 240px;
-                padding-top: 15px;
+                padding-top: 10px;
                 margin-bottom: 0px; 
                 margin-top: 2px;
             }
@@ -186,86 +154,84 @@ img {
         &:hover {
             @include animationhover;
         }  
-    } 
-        
-} /**** FIN AGENCEMENT MENU DELICE ****/
-    .prix {
-        transform: translateY(69%);
-        width: 55px;
-        font-weight: 600;
-    }
+    }       
+} 
+/*** MENU DELICE ***/
+.menuMyfood-Delice {
+    height: 1155px;
+}
+/*** FIN AGENCEMENT MENU DELICE ***/
 
-    .prix-Note {
-        transform: translateY(69%);
-        width: 50px;
-        font-weight: 600;
-        margin-left: 35px
-    }
+.menuMyfood-Francaise {
+    height: 1150px;
+}
 
+.prix {
+   @include price;
+}
+
+.prix-Note {
+    @include price;
+    width: 50px;
+    margin-left: 37px
+}
+
+.prix-Note_bis {
+    @include price;
+    width: 50px;
+    margin-left: 10px;
+}
+    
 .menuMyfood--button {
     @include button;
     margin-top: 25px;
 }
-/****** MENU NOTE ******/
+
+/*** MENU NOTE ***/
 .Menu_Note--img {
+    height: 250px;
     & img {
-        object-position: 0 -85px;
+        object-position: 0 -95px;
     }
 }
 .menuNote {
+    @include menuMyfood;
     height: 1255px;
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(233, 233, 233, 0.993);
-    width: 100%;
-    border-radius: 30px 30px 0 0; 
-    position: relative;
     bottom: 30px;
 
-    .menuNote--title
-    {
-        margin-top: 5px;
-        margin-left: 15px;
-        width: 85%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    .menuNote--title {
+        @include list--title;
+
+        h2 {
+            font-family: 'Shrikhand', cursive;
+            font-weight: 400;
+            font-size: 27px;
+        }  
 
         .far {
             font-size: 25px ;
             z-index: 0;
+            line-height: 0;
         }    
-                & .fas {
-                    @include heart;
-                    left: 82.4%;
-                    top: 30px;
-                    font-size: 25px;
-                    width: 35px;
-                }    
-                    &:hover {
-                        .far {
-                            transition-duration: 3s;
-                            opacity: 0;
-                        }
-                        .fas {
-                            transition-duration: 3s;
-                            opacity: 1;
-                        }
-                    }         
+        
+        & .fas {
+            @include heart;
+            left: 82.4%;
+            top: 30px;
+            font-size: 25px;
+            width: 35px;
+            height: 35px;
+        }    
+            &:hover {
+                .far {
+                    transition-duration: 3s;
+                    opacity: 0;
+                }
+                .fas {
+                    transition-duration: 3s;
+                    opacity: 1;
+                }
+            }       
     }
-  
-        h2 {
-        font-family: 'Shrikhand', cursive;
-        font-weight: 400;
-        font-size: 27px;
-      }
-    }
-
-    /**** MENU DELICE ****/
-.menuMyfood-Delice{
-    height: 1165px;
 }
-   /*** .menuMyfood--button {
-        @include button;
-        margin-top: 30px;
-    }**/
+ 

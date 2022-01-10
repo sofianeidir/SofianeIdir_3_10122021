@@ -1,7 +1,7 @@
 
 /*** VERSION TABLETTE INDEX.HTML ***/
 @media screen and ( min-width: 640px) {
-    /***HEADER***/
+    /*** HEADER ***/
     header {
         height: 90px;
 
@@ -23,7 +23,7 @@
             font-size: 21px;
         }
     }
-   /***RECHERCHES***/
+   /*** RECHERCHES ***/
     .reservation_text {
         & h2 { 
             font-size: 30px;
@@ -44,7 +44,7 @@
         }
     }  
 
-    /***PARTIE FONCTIONNEMENT***/
+    /*** PARTIE FONCTIONNEMENT ***/
     .functioning {
         height: 500px;
 
@@ -296,7 +296,7 @@
 
     img {
         object-fit: cover;
-        width: 96.6%;
+        width: 100%;
         height: 250px;
     }
 
@@ -323,15 +323,17 @@
             .fas {
                 position: relative;
                 left: -10px;
-                top: 0px;
+                top: 5px;
                 font-size: 26px;
                 z-index: 1; 
             }      
         }
     } 
+
     .menuMyfood-Delice{
         height: 1385px;
     }
+
     .menuMyfood_list{ 
         width: 100%;
         margin: 0;
@@ -349,82 +351,79 @@
             line-height: 0px;
             padding-left: 10px;
             margin-bottom: 25px;
-            box-shadow: 0 5px 10px rgba(158, 158, 158, 0.267);
     
-        & h4 {
-            margin-top: 10px;
-            font-size: 21px;
-            font-weight: 500;
-        }
+            & h4 {
+                margin-top: 10px;
+                font-size: 21px;
+                font-weight: 500;
+            }
         
-        & p {
-            max-width: 345px;
-            font-size: 19px;
-            font-weight: 100;
+            & p {
+                max-width: 345px;
+                font-size: 19px;
+                font-weight: 100;
+            }
         }
-    }
     
         .prix {
             font-weight: 600;
         }
     }
-    
-        .menuMyfood_list{
+/*** AGENCEMENT MENU DELICE ***/    
+    .menuMyfood_list{
 
-            .menuMyfood_list--blocDelice {
-                height: 110px;
-                width: 70%;
-                margin: 25px auto ;
-                & h4 {
-                    margin-top: 20px;
-                    font-size: 21px;
-                    font-weight: 500;
-                    padding-top: 0;
-                }
-                
-                & p {
-                    font-size: 19px;
-                    font-weight: 100;
-                }
-        
+        .menuMyfood_list--blocDelice {
+            height: 110px;
+            width: 70%;
+            margin: 25px auto ;
+            & h4 {
+                margin-top: 20px;
+                font-size: 21px;
+                font-weight: 500;
+                padding-top: 0;
             }
-        }    
+                
+            & p {
+                font-size: 19px;
+                font-weight: 100;
+            }
+        }
+    }    
     
 /***** MENU NOTE *****/
     .menuNote {
         height: 1490px;
+
         .menuNote--title {
-           
             text-align: center;
             justify-content: center;
             width: 96.5%;
+
             h2 {
                 font-size: 30px;
             }
 
-        .far {
-            font-size: 25px ;
-            position: relative;
-            left: 20px;
-            z-index: 0;
-        }
-         .fas {
-            position: relative;
-            left: -10px;
-            top: 0px;
-            font-size: 26px;
-            z-index: 1;
-       
-        }    
-    }  
+            .far {
+                font-size: 25px ;
+                position: relative;
+                left: 20px;
+                z-index: 0;
+            }
+
+            .fas {
+                position: relative;
+                left: -10px;
+                top: 4px;
+                font-size: 26px;
+                z-index: 1;
+            }        
+        }  
     }
 
     footer {
         text-align: center;
     }
-
 }
-
 
 /*** VERSION DESKTOP MENUS.HTML ***/
 
@@ -443,7 +442,7 @@
     img {
         object-fit: cover;
         height: 400px;
-        width: 96.6%;
+        width: 100%;
         object-position: 0;
     }
 
@@ -451,15 +450,7 @@
         height: 1370px;
 
         .menuMyfood--title {
-            margin-top: 5px;
-            margin-left: 15px;
-            text-align: center;
-            width: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 96.5%;
-            cursor: pointer;
+           @include menuMyfood_title--desktop;
 
             h2 {
                 font-size: 40px;
@@ -471,10 +462,10 @@
                 left: 20px;
             }
         }
+
         .menuMyfood_list{ 
             width: 96.5%;
-
-            margin-left:15px;
+            margin-left: 15px;
         
             h3 {
                 font-size: 21px;
@@ -483,20 +474,13 @@
             }
         }    
     } 
+
     /*** MENU NOTE ***/
     .menuNote {
         height: 1485px;
     
-        .menuNote--title
-        {
-            margin-top: 5px;
-            margin-left: 15px;
-            text-align: center;
-            width: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
+        .menuNote--title {
+            @include menuMyfood_title--desktop;
         }
     
         h2 {
@@ -542,11 +526,10 @@
                 max-width: 295px;
                 padding-top: 10px;
                 font-size: 17px;
-            
             }
     
             .prix {
-            top: 35px;
+                top: 35px;
             }
         }
     }
@@ -567,8 +550,8 @@
             .picture_Note img{ 
                 object-position: 0 -250px;
             }
+        }
     }
-}
 } 
 
 @media screen and (min-width: 1500px) {
@@ -584,8 +567,8 @@
             .picture_Note img{ 
                 object-position: 0 -350px;
             }
+        }
     }
-}
 } 
 
             
