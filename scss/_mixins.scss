@@ -113,7 +113,6 @@
     left: 87%;
     bottom: 23px;
     font-size: 22px;
-   /** z-index: 1; **/
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
@@ -166,8 +165,7 @@
 
 @mixin animationhover {
     .menuMyfood_list--animation {
-        /**transform-origin: right;**/
-        /**visibility: visible;**/
+        transform-origin: right;
         width: 65px;
         
         & .fas {

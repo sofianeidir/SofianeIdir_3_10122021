@@ -269,7 +269,6 @@ form :focus::placeholder {
   left: 87%;
   bottom: 23px;
   font-size: 22px;
-  /** z-index: 1; **/
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -380,7 +379,6 @@ img {
   left: 87%;
   bottom: 23px;
   font-size: 22px;
-  /** z-index: 1; **/
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -469,8 +467,7 @@ img {
   margin: auto;
 }
 .menuMyfood_list .menuMyfood_list--bloc:hover .menuMyfood_list--animation {
-  /**transform-origin: right;**/
-  /**visibility: visible;**/
+  transform-origin: right;
   width: 65px;
 }
 .menuMyfood_list .menuMyfood_list--bloc:hover .menuMyfood_list--animation .fas {
@@ -531,8 +528,7 @@ img {
   padding-top: 3px;
 }
 .menuMyfood_list .menuMyfood_list--blocDelice:hover .menuMyfood_list--animation {
-  /**transform-origin: right;**/
-  /**visibility: visible;**/
+  transform-origin: right;
   width: 65px;
 }
 .menuMyfood_list .menuMyfood_list--blocDelice:hover .menuMyfood_list--animation .fas {
@@ -639,7 +635,6 @@ img {
   left: 87%;
   bottom: 23px;
   font-size: 22px;
-  /** z-index: 1; **/
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
